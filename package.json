@@ -1,0 +1,24 @@
+{
+  "name": "lasyntex",
+  "version": "1.0.0",
+  "description": "Latex Syntax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dourian/Lasyntex.git"
+  },
+  "author": "Dorian and Sarina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dourian/Lasyntex/issues"
+  },
+  "homepage": "https://github.com/dourian/Lasyntex#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
