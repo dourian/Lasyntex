@@ -14,7 +14,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/:mathcommands", async (req, res) => {
-  const query = "SELECT * FROM breeds WHERE name = ?";
+  const query = "SELECT * FROM mathcommands WHERE name = ?";
   pool.query(query, [req.params.mathcommands], (error, results) => {
     if (!results[0]) {
       res.json({ status: "Not found!" });
@@ -23,3 +23,10 @@ app.get("/:mathcommands", async (req, res) => {
     }
   });
 });
+
+const pool = mysql.createPool({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
+})
