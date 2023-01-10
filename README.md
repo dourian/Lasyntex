@@ -1,5 +1,6 @@
 # Lasyntex: Fullstack API
 
+https://lasyntex-service-e5x5h3x7kq-uc.a.run.app
 https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/
 
 **Frontend**
