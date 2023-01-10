@@ -21,6 +21,6 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-**Architecture**
+## Architecture
 
 ![API project](https://user-images.githubusercontent.com/75771131/211238851-c94341a8-9427-4628-9916-07608de1a70a.png)
