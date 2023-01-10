@@ -5,6 +5,8 @@
 
 **DOCS:** https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/
 
+## Tech used
+
 **Frontend**
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
