@@ -14,7 +14,7 @@
     },
     "schemes": ["http"],
     "host": "https://lasyntex-service-e5x5h3x7kq-uc.a.run.app",
-    "basePath": "/api",
+    "basePath": "/",
     "paths" : {
         "/{name}" : {
             "get" : {
