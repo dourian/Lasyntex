@@ -42,7 +42,9 @@ app.get("/:mathcommands", async (req, res) => {
 app.post("/", async (req, res) => {
   const data = {
     name: req.body.name,
-    content: req.body.content
+    syntax: req.body.syntax,
+    example_uses: req.body.example_uses,
+    description: req.body.description
   }
   const query = "INSERT INTO mathcommands VALUES (?,?)";
   pool.query(query,Object.values(data), (error) => {
@@ -76,7 +78,9 @@ app.delete("/:mathcommands", async (req, res) => {
 app.patch("/:mathcommands", async (req, res) => {
   const data = {
     name: req.body.name,
-    content: req.body.content
+    syntax: req.body.syntax,
+    example_uses: req.body.example_uses,
+    description: req.body.description
   }
   const query = "DELETE FROM mathcommands WHERE name= ?"
   pool.query(query, [req.body.name], (error) => {
