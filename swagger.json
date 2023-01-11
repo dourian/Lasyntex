@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is an API used to search for Latex commands",
+        "description": "This is an API used to search for LATEX commands",
         "version": "1.0.0",
         "title": "Lasyntex API",
         "contact": {
@@ -18,7 +18,7 @@
     "paths" : {
         "/{name}" : {
             "get" : {
-                "summary" : "Gets the Latex commands that does specified task",
+                "summary" : "Gets the LATEX commands that does specified task",
                 "description": "Search through SQL database to find Latex command",
                 "produces": ["application/json"],
                 "parameters": [],
@@ -41,22 +41,22 @@
                 }
             }
         },
-        "/todo" : {
+        "/" : {
             "post" : {
-                "summary" : "Save the task",
-                "description": "Save the task",
+                "summary" : "Post a LATEX command",
+                "description": "Add a LATEX command to the database with the name, proper syntax, an example use and a short description.",
                 "produces": ["application/json"],
                 "consumes": ["application/json"],
                 "parameters": [
                     {
                         "in": "body",
-                        "name": "body",
-                        "description": "task object",
+                        "name": "sqrt",
+                        "description": "Sample Command",
                         "required": true,
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "task" : {
+                                "" : {
                                     "type": "object",
                                     "$ref": "#/definitions/Task"
                                 } 
@@ -169,16 +169,16 @@
         "todosResponse": {
             "type": "object",
             "properties": {
-                "id": {
-                     "type": "integer"
+                "name": {
+                     "type": "string"
                 },
-                "task": {
+                "syntax": {
                     "type": "string"
                 },
-                "assignee": {
+                "example_uses": {
                     "type": "string"
                 },
-                "status": {
+                "description": {
                     "type": "string"
                 }
             }
@@ -186,13 +186,16 @@
         "Task": {
             "type": "object",
             "properties": {
-                "task": {
+                "name": {
                     "type": "string"
                 },
-                "assignee": {
+                "syntax": {
                     "type": "string"
                 },
-                "status": {
+                "example_uses": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 }
             }
@@ -200,10 +203,10 @@
         "InvalidResponse": {
             "type": "object",
             "properties": {
-                "statusCode": {
+                "command": {
                     "type": "string"
                 },
-                "message": {
+                "content": {
                     "type": "string"
                 }
             }
