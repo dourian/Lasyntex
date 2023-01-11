@@ -46,7 +46,7 @@ app.post("/", async (req, res) => {
     example_uses: req.body.example_uses,
     description: req.body.description
   }
-  const query = "INSERT INTO mathcommands VALUES (?,?)";
+  const query = "INSERT INTO mathcommands VALUES (?,?,?,?)";
   pool.query(query,Object.values(data), (error) => {
     if (error){
       res.json({
@@ -94,7 +94,7 @@ app.patch("/:mathcommands", async (req, res) => {
       // })
     }
   })
-  const secondquery = "INSERT INTO mathcommands VALUES (?,?)";
+  const secondquery = "INSERT INTO mathcommands VALUES (?,?,?,?)";
   pool.query(secondquery,Object.values(data), (error) => {
     if (error){
       res.json({
