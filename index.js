@@ -63,7 +63,7 @@ app.patch("/:mathcommands", async (req, res) => {
     name: req.body.name,
     content: req.body.content
   }
-  const query = "DELETE FROM mathcommands WHERE name= ?"
+  const query = "DELETE FROM mathcommands WHERE name = ?"
   pool.query(query, [req.body.name], (error) => {
     if (error){
       res.json({
