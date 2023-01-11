@@ -58,6 +58,21 @@ app.post("/", async (req, res) => {
   });
 });
 
+app.delete("/:mathcommands", async (req, res) => {
+  const query = `DELETE FROM mathcommands WHERE name= ?`;
+  pool.query(query, [req.params.mathcommands], (error) => {
+    if (error){
+      res.json({
+        status: "failure to delete", reason: error.code
+      })
+    } else{
+      res.json({
+        status: "success"
+      })
+    }
+  })
+});
+
 app.patch("/:mathcommands", async (req, res) => {
   const data = {
     name: req.body.name,
