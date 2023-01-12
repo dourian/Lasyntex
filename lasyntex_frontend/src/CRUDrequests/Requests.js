@@ -7,7 +7,7 @@ function Requests({apiUrl, commandName}) {
 
     // Stores the data retrieved from API
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/"+apiUrl+commandName)
+        fetch(apiUrl+commandName)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
