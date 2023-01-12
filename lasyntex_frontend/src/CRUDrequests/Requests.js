@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import Command from '../classes/Command'
+import Global from '../classes/Global';
 
 
 function Requests({apiUrl, commandName}) {
-    const [posts,setPosts] = useState([]);
+    // const [postList, setPosts] = useState([]);
+
 
     // Stores the data retrieved from API
-    useEffect(() => {
-        fetch(apiUrl+commandName)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setPosts(data)
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
-    }, []);
+    fetch(apiUrl+commandName)
+        .then((response) => response.json())
+        .then((data) => {
+            // var array = [new Command(data.name, data.syntax, data.example, data.description)];
+            
+            
+        })
+        .catch((err) => {
+            console.log(err.message);
+        });
+
 
     return (
         <div className="posts-container">
-           {posts.map((post) => {
+           {Global.allCommands.map((post) => {
               return (
-                 <div className="post-card" key={post.name}>
-                    <h2 className="post-title">{post.name}</h2>
-                    <p className="post-body">{post.syntax}</p>
-                 </div>
+                <div>
+                <p>{post.name}</p>
+                <p>{post.syntax}</p>
+                <p>{post.example}</p>
+                <p>{post.description}</p>
+                </div>
               );
            })}
         </div>
