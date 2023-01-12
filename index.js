@@ -2,6 +2,9 @@ const express = require("express");
 const mysql = require("mysql");
 const app = express();
 
+// use cors
+var cors = require('cors')
+
 // import library and files
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
