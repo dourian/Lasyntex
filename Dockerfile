@@ -7,5 +7,5 @@ COPY package*.json ./
 RUN npm install
 
 # Copy everything & build
-COPY . .
+COPY . ./
 CMD node index.js
