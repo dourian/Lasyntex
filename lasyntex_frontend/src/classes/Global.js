@@ -1,5 +1,5 @@
 class Global {
-    static allCommands = []
+    static allCommands = {}
 }
 
 export default Global;

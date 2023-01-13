@@ -1,9 +1,9 @@
-GOOGLE_PROJECT_ID=lasyntex #google project id
+GOOGLE_PROJECT_ID=lasyntex-374603 #google project id
 CLOUD_RUN_SERVICE=lasyntex-service #project id + "service", prob anything i want
-INSTANCE_CONNECTION_NAME=lasyntex:us-central1:lasyntex-sql #instance connection name
+INSTANCE_CONNECTION_NAME=lasyntex-374603:us-central1:lasyntex-sql #instance connection name
 DB_USER=root #root
 DB_PASS=ultraboost #password set earlier
-DB_NAME=commands_data #database name
+DB_NAME=mathcommands #database name
 
 #took 10 hours to write this but i got it xD
 gcloud builds submit --tag gcr.io/$GOOGLE_PROJECT_ID/$CLOUD_RUN_SERVICE \

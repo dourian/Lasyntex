@@ -13,7 +13,7 @@
         }
     },
     "schemes": ["http"],
-    "host": "https://lasyntex-service-e5x5h3x7kq-uc.a.run.app",
+    "host": "https://lasyntex-service-ftd5kbbgma-uc.a.run.app",
     "basePath": "/",
     "paths" : {
         "/{name}" : {

@@ -37,9 +37,24 @@ app.get("/", async (req, res) => {
   res.json({status: "Lasyntex writing proofs since 2023" });
 });
 
-app.get("/:mathcommands", async (req, res) => {
-  const query = "SELECT * FROM mathcommands WHERE name = ?";
-  pool.query(query, [req.params.mathcommands], (error, results) => {
+app.get("/allcommands", async (req, res) => {
+  const query = "SELECT * FROM commands";
+  pool.query(query, (error, results) => {
+    if (error) {
+      console.log(error);
+      res.json({
+        status: "failure",
+        reason: error
+      })
+    } else {
+      res.json(results)
+    }
+  })
+})
+
+app.get("/:commands", async (req, res) => {
+  const query = "SELECT * FROM commands WHERE name = ?";
+  pool.query(query, [req.params.commands], (error, results) => {
     if (!results[0]) {
       res.json({ status: "Not found!" });
     } else {
@@ -52,10 +67,10 @@ app.post("/", async (req, res) => {
   const data = {
     name: req.body.name,
     syntax: req.body.syntax,
-    example_uses: req.body.example_uses,
+    example: req.body.example,
     description: req.body.description
   }
-  const query = "INSERT INTO mathcommands VALUES (?,?,?,?)";
+  const query = "INSERT INTO commands VALUES (?,?,?,?)";
   pool.query(query,Object.values(data), (error) => {
     if (error){
       res.json({
@@ -69,9 +84,9 @@ app.post("/", async (req, res) => {
   });
 });
 
-app.delete("/:mathcommands", async (req, res) => {
-  const query = `DELETE FROM mathcommands WHERE name= ?`;
-  pool.query(query, [req.params.mathcommands], (error) => {
+app.delete("/:commands", async (req, res) => {
+  const query = `DELETE FROM commands WHERE name= ?`;
+  pool.query(query, [req.params.commands], (error) => {
     if (error){
       res.json({
         status: "failure to delete", reason: error.code
@@ -84,14 +99,14 @@ app.delete("/:mathcommands", async (req, res) => {
   })
 });
 
-app.patch("/:mathcommands", async (req, res) => {
+app.patch("/:commands", async (req, res) => {
   const data = {
     name: req.body.name,
     syntax: req.body.syntax,
-    example_uses: req.body.example_uses,
+    example: req.body.example,
     description: req.body.description
   }
-  const query = "DELETE FROM mathcommands WHERE name = ?"
+  const query = "DELETE FROM commands WHERE name = ?"
   pool.query(query, [req.body.name], (error) => {
     if (error){
       res.json({
@@ -103,7 +118,7 @@ app.patch("/:mathcommands", async (req, res) => {
       // })
     }
   })
-  const secondquery = "INSERT INTO mathcommands VALUES (?,?,?,?)";
+  const secondquery = "INSERT INTO commands VALUES (?,?,?,?)";
   pool.query(secondquery,Object.values(data), (error) => {
     if (error){
       res.json({
