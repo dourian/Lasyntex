@@ -1,15 +1,12 @@
 import "./App.css";
 // required reclaration to use react-latex library
+import Textfile from "./textfile";
 var Latex = require("react-latex");
 
 function App() {
 
   return (
-        <textfile></textfile>
-        // <Requests
-        //   apiUrl={"https://lasyntex-service-ftd5kbbgma-uc.a.run.app/"}
-        //   commandName={"allcommands"}
-        // ></Requests>
+        <Textfile></Textfile>
   );
 }
 
