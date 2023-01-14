@@ -3,6 +3,7 @@ import SearchBar from "./Components/Searchbar";
 import React, { useState } from "react";
 
 // required reclaration to use react-latex library
+import Textfile from "./textfile";
 var Latex = require("react-latex");
 
 const posts = [
