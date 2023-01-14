@@ -1,8 +1,8 @@
+import "./Searchbar.css";
+
+// SearchBar consumes a query and returns a search bar
 const SearchBar = ({ searchQuery, setSearchQuery }) => (
-    <form action="/" method="get">
-        <label htmlFor="header-search">
-            <span className="visually-hidden">Search</span>
-        </label>
+    <form action="/" method="get" autocomplete="off">
         <input
             value={searchQuery}
             onInput={e => setSearchQuery(e.target.value)}
@@ -11,7 +11,6 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => (
             placeholder='Search.. ie "bold"'
             name="s"
         />
-        <button type="submit">Search</button>
     </form>
 );
 

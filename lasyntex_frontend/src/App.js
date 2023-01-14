@@ -1,6 +1,7 @@
 import "./App.css";
 import SearchBar from "./Components/Searchbar";
 import React, { useState } from "react";
+import logo from "./assets/lasyntex.svg";
 
 // required reclaration to use react-latex library
 var Latex = require("react-latex");
@@ -47,27 +48,40 @@ function App() {
   const filteredPosts = filterPosts(posts, searchQuery);
 
   return (
-    <div className="logo_and_search">
-      <img src="lasyntex_frontend/src/assets/lasyntex.png" alt="image description" width="200" height="150"></img>
-      <div className="searchbar_and_results">
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <ul>
-          {filteredPosts.map((post) => (
-            <li key={post.key}>
-              <div className="search_result">
-                <p>
-                  Name: <Latex>{`$ ${post.name} $`}</Latex>
-                </p>
-                <p>Syntax: {post.syntax}</p>
-                <p>
-                  Example: <Latex>{`$ ${post.example} $`}</Latex>
-                </p>
-                <p>Description: {post.commandDescription}</p>
-              </div>
-              {/* <Latex>${post.name.toLowerCase()}$</Latex> */}
-            </li>
-          ))}
-        </ul>
+    <div className="page_wrapper">
+      <div className="logo_and_search">
+        <img src={logo} alt="description"></img>
+        <p>Browse for LaTeX commands</p>
+        <div className="searchbar_and_results">
+          {/* Search bar goes here */}
+          <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+          {/* list of results goes here */}
+          <ul>
+            {filteredPosts.map((post) => (
+              <li key={post.key}>
+                <div className="search_result">
+                  <p>
+                    Name: <Latex>{`$ ${post.name} $`}</Latex>
+                  </p>
+                  <p>Syntax: {post.syntax}</p>
+                  <p>
+                    Example: <Latex>{`$ ${post.example} $`}</Latex>
+                  </p>
+                  <p>Description: {post.commandDescription}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          {/* list of results end here */}
+        </div>
+      </div>
+      <div className="bottom_left">
+        <a href="https://github.com/dourian/Lasyntex">Github</a>
+        <a href="mailto:dz2chen@uwaterloo.ca">Contact</a>
+        <a href="https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/">API</a>
       </div>
     </div>
   );

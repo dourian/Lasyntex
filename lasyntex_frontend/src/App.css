@@ -1,31 +1,49 @@
-.searchbar_and_results{
+.page_wrapper {
+  /* Fill screen */
+  width: 100%;
+  height: 100vh;
+
+  /*Spread out items*/
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 
-.image-container {
-  /* width: 300px;
-  height: 200px; */
-  margin: 1.5rem;
-  padding: 1.5rem;
-  height: 50px;
-  background-image: url("assets/lasyntex.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.searchbar_and_results{
+.logo_and_search {
+  /* Align items to center */
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+  /* Add some space to top & extend full height */
+  padding-top: 20vh;
+  height: 100%;
+}
+
+img {
+  width: 10%;
+}
+
+.searchbar_and_results {
+
+  /* Aligning items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  /* Fill heigh and width */
   width: 80%;
   height: 80%;
+}
+
+.bottom_left {
+  margin: 15px;
+}
+
+a {
+  margin-right: 1rem;
+  color: rgb(23, 23, 23);
 }
 
 .search_result {
@@ -37,7 +55,7 @@
   /* 3D effect */
   background-color: white;
   box-shadow: 0px 0px 10px #ccc;
-  font-family: 'San Francisco', sans-serif;
+  font-family: "San Francisco", sans-serif;
   color: #333;
 }
 
@@ -50,10 +68,8 @@ ul {
   list-style-type: none;
 }
 
-
 @keyframes hover-animation {
   100% {
     transform: scale(1.05);
   }
 }
-

@@ -4,6 +4,7 @@ import Global from "../classes/Global";
 import TextField from "@mui/material/TextField";
 var Latex = require("react-latex");
 
+
 function Requests({ apiUrl, commandName }) {
   const [postList, setPosts] = useState([]);
 
