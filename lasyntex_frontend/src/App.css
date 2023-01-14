@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.searchbar_and_results{
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-container {
+  /* width: 300px;
+  height: 200px; */
+  margin: 1.5rem;
+  padding: 1.5rem;
+  height: 50px;
+  background-image: url("assets/lasyntex.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchbar_and_results{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.search_result {
+  /*basic padding*/
+  max-width: 90%;
+  padding: 0.5rem;
+  margin: 1rem;
+
+  /* 3D effect */
+  background-color: white;
+  box-shadow: 0px 0px 10px #ccc;
+  font-family: 'San Francisco', sans-serif;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.search_result:hover {
+  animation: hover-animation 1s;
+  animation-fill-mode: forwards;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+@keyframes hover-animation {
+  100% {
+    transform: scale(1.05);
   }
 }
+

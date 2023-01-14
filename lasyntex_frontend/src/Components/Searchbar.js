@@ -1,5 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
-
 const SearchBar = ({ searchQuery, setSearchQuery }) => (
     <form action="/" method="get">
         <label htmlFor="header-search">
