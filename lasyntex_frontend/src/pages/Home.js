@@ -1,6 +1,7 @@
 import SearchBar from "../components/Searchbar";
 import React, { useState, useEffect } from "react";
 import logo from "../assets/lasyntex.svg";
+import "../App.css";
 
 // required reclaration to use react-latex library
 var Latex = require("react-latex");
@@ -15,6 +16,13 @@ const filterPosts = (posts, query) => {
     return postName.includes(query.toLowerCase());
   });
 };
+
+const replace = (oldstr) => {
+  const newstr = oldstr.replaceAll("[backslash]", "\\");
+  console.log(newstr);
+  return newstr;
+}
+
 
 function Home() {
   const { search } = window.location;
@@ -57,11 +65,11 @@ function Home() {
                     <p>
                       Name: <Latex>{`$ ${post.name} $`}</Latex>
                     </p>
-                    <p>Syntax: {post.syntax}</p>
+                    <p>Syntax: {replace(post.syntax)}</p>
                     <p>
-                      Example: <Latex>{`$ ${post.example} $`}</Latex>
+                      Example: <Latex>{`$ ${replace(post.example)} $`}</Latex>
                     </p>
-                    <p>Description: {post.commandDescription}</p>
+                    <p>Description: {post.description}</p>
                   </div>
                 </li>
               ))}
