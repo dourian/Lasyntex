@@ -6,8 +6,7 @@ form {
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid black;
-
-    
+    min-height: 50px;
 }
 
 input[type="text"] {

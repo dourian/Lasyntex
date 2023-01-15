@@ -25,7 +25,6 @@ img {
 }
 
 .searchbar_and_results {
-
   /* Aligning items */
   display: flex;
   flex-direction: column;
@@ -35,6 +34,13 @@ img {
   /* Fill heigh and width */
   width: 80%;
   height: 80%;
+}
+
+nav ul {
+  height: 50vh;
+  width: 50vw;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .bottom_left {
@@ -60,17 +66,6 @@ a {
   color: #333;
 }
 
-.search_result:hover {
-  animation: hover-animation 1s;
-  animation-fill-mode: forwards;
-}
-
 ul {
   list-style-type: none;
-}
-
-@keyframes hover-animation {
-  100% {
-    transform: scale(1.05);
-  }
 }

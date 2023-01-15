@@ -1,8 +1,6 @@
-
 import SearchBar from "../components/Searchbar";
 import React, { useState, useEffect } from "react";
 import logo from "../assets/lasyntex.svg";
-
 
 // required reclaration to use react-latex library
 var Latex = require("react-latex");
@@ -37,7 +35,6 @@ function Home() {
   });
 
   return (
-
     <div className="page_wrapper">
       <div className="logo_and_search">
         <img src={logo} alt="description"></img>
@@ -49,36 +46,38 @@ function Home() {
             setSearchQuery={setSearchQuery}
           />
           {/* list of results goes here */}
-          <ul>
-            {filteredPosts.map((post) => (
-              
-              <li key={post.key}>
-              {/* <Link to={`/${post.name}`}>
+          <nav>
+            <ul>
+              {filteredPosts.map((post) => (
+                <li key={post.key}>
+                  {/* <Link to={`/${post.name}`}>
 
               </Link> */}
-                <div className="search_result">
-                  <p>
-                    Name: <Latex>{`$ ${post.name} $`}</Latex>
-                  </p>
-                  <p>Syntax: {post.syntax}</p>
-                  <p>
-                    Example: <Latex>{`$ ${post.example} $`}</Latex>
-                  </p>
-                  <p>Description: {post.commandDescription}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+                  <div className="search_result">
+                    <p>
+                      Name: <Latex>{`$ ${post.name} $`}</Latex>
+                    </p>
+                    <p>Syntax: {post.syntax}</p>
+                    <p>
+                      Example: <Latex>{`$ ${post.example} $`}</Latex>
+                    </p>
+                    <p>Description: {post.commandDescription}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </nav>
           {/* list of results end here */}
         </div>
       </div>
       <div className="bottom_left">
         <a href="https://github.com/dourian/Lasyntex">Github</a>
         <a href="mailto:dz2chen@uwaterloo.ca">Contact</a>
-        <a href="https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/">API</a>
+        <a href="https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/">
+          API
+        </a>
       </div>
     </div>
-    
   );
 }
 
