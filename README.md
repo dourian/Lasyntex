@@ -3,6 +3,8 @@
 
 **API:** https://lasyntex-service-e5x5h3x7kq-uc.a.run.app
 
+**SITE:** https://lasyntex.ca/
+
 **DOCS:** https://lasyntex-service-e5x5h3x7kq-uc.a.run.app/api-docs/
 
 ## Tech used
