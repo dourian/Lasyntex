@@ -16,9 +16,6 @@ const filterPosts = (posts, query) => {
   });
 };
 
-
-
-
 function Home() {
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
@@ -30,7 +27,11 @@ function Home() {
     fetch("https://lasyntex-service-ftd5kbbgma-uc.a.run.app/allcommands")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data);
+        // sorts array lexigraphically first
+        var dummy = [];
+        dummy = data;
+        let sorteddummy = dummy.sort((r1, r2) => r1.name.localeCompare(r2.name))
+        setPosts(sorteddummy);
       })
       .catch((err) => {
         console.log(err.message);
@@ -51,12 +52,13 @@ function Home() {
           {/* list of results goes here */}
           <nav>
             <ul>
-              {filteredPosts.map((post) => (
+                {filteredPosts.map((post) => (
                 <li key={post.key}>
-                  <SearchResult name={post.name} 
-                                syntax={post.syntax}
-                                example={post.example}
-                                description={post.description}
+                  <SearchResult
+                    name={post.name}
+                    syntax={post.syntax}
+                    example={post.example}
+                    description={post.description}
                   ></SearchResult>
                 </li>
               ))}

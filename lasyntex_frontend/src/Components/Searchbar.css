@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+
+
 form {
     display: flex;
     align-items: center;
@@ -15,28 +18,90 @@ input[type="text"] {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    /* background-color: #f1f1f1; */
+
     font-size: 16px;
     outline: none;
 }
 
-/* button[type="submit"] {
-    width: 20%;
-    background-color: #4285F4;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 0 25px 25px 0;
+.search_result{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    /* height: 30px; */
+}
+
+.search_result p{
+    padding: 0.5rem;
+    /* margin: 5px; */
+}
+
+.syntax{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.name_box{
+    width: auto;
+    height: 100%;
+    justify-content: left;
+    border-right: 1px solid black;
+}
+
+.dropdown_icon{
+    justify-self: right;
+    padding: 5px;
+    grid-column: 4;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
 }
 
-button[type="submit"]:hover {
-    background-color: #357ae8;
+.dropdown_results{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    margin: 0.2rem;
+    height: fit-content;
 }
 
-button[type="submit"]:active {
-    background-color: #1b4f72;
-} */
+.examples{
+    /* aligning itself to parent */
+    width: auto;
+    height: 100%;
+    grid-column: 1;
+    border-right: 1px solid black;
+
+    /* aligning items */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input_box{
+    width: 100%;
+    justify-content: left;
+    border-bottom: 1px solid black;
+
+    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+.example_no_latex{
+    padding: 5px;
+    grid-column: 1;
+    align-self: flex-start;
+    font-family: 'Roboto Mono', monospace;
+    /* width: 100%; */
+    /* border-bottom: 1px solid black; */
+}
+
+.example_latex{
+    margin: 5px;
+    font-family: 'Roboto Mono', monospace;
+    /* grid-column: 2; */
+}
+
+.description{
+    padding: 1rem;
+    grid-column: 2;
+}
+

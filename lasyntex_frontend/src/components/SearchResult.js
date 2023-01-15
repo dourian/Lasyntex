@@ -1,30 +1,51 @@
 import "./Searchbar.css";
-import 'katex/dist/katex.min.css'
-import Latex from 'react-latex-next'
-import Collapsible from 'react-collapsible';
-
+import "katex/dist/katex.min.css";
+import Latex from "react-latex-next";
+import Collapsible from "react-collapsible";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const replace = (oldstr) => {
-    const newstr = oldstr.replaceAll("[backslash]", "\\");
-    console.log(newstr);
-    return newstr;
-}
+  const newstr = oldstr.replaceAll("[backslash]", "\\");
+  return newstr;
+};
 
 function SearchResult({ name, syntax, example, description }) {
-    return (
-        
-        <Collapsible trigger={<div className="search_result">
-        <p>
-            Name: <Latex>{`$ ${name} $`}</Latex>
-        </p>
-        <p>Syntax: {replace(syntax)}</p>
-    </div>}>
-    <p>
-            Example: <Latex>{`$ ${replace(example)} $`}</Latex>
-        </p>
-        <p>Description: {description}</p>
+  return (
+    <Collapsible
+      trigger={
+        <div className="search_result">
+          <div className="name_box">
+            <p>
+              <Latex>{`$ ${name} $`}</Latex>
+            </p>
+          </div>
+          <p className="syntax">{replace(syntax)}</p>
+          <div className="dropdown_icon">
+            <RiArrowDropDownLine />
+          </div>
+        </div>
+      }
+    >
+      <div className="dropdown_results">
+        <div className="examples">
+          <div className="input_box">
+            <p className="example_no_latex">
+              Input:
+              <br /> {replace(example)}
+            </p>
+          </div>
+          <p className="example_latex">
+            Output:
+            <br />
+            <Latex>{`$ ${replace(example)} $`}</Latex>
+          </p>
+        </div>
+        <div className="description">
+          <p>Description: {description}</p>
+        </div>
+      </div>
     </Collapsible>
-    )
+  );
 }
 
 export default SearchResult;

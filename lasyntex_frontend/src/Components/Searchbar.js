@@ -2,7 +2,7 @@ import "./Searchbar.css";
 
 // SearchBar consumes a query and returns a search bar
 const SearchBar = ({ searchQuery, setSearchQuery }) => (
-    <form action="/" method="get" autoComplete="off">
+    <form onsubmit="return false;" autoComplete="off">
         <input
             value={searchQuery}
             onInput={e => setSearchQuery(e.target.value)}
@@ -10,8 +10,10 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => (
             id="header-search"
             placeholder='Search.. ie "bold"'
             name="s"
+            onKeyDown={e => {if (e.keyCode === 13) e.preventDefault()}}
         />
     </form>
+    
 );
 
 export default SearchBar;
