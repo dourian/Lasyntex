@@ -105,28 +105,50 @@ app.patch("/:commands", async (req, res) => {
     example: req.body.example,
     description: req.body.description
   }
-  const query = "DELETE FROM commands WHERE name = ?"
-  pool.query(query, [req.body.name], (error) => {
+  const query = `UPDATE commands SET name = ${data.name}, syntax = ${data.syntax}, example = ${data.example}, description = ${data.description} WHERE name = ?`
+    pool.query(query, [req.body.name], (error) => {
     if (error){
       res.json({
-        status: "failure to delete", reason: error.code
+        status: "failure to update", reason: error.code
       })
     } else{
-      // res.json({
-      //   status: "success"
-      // })
+      res.json({
+        status: "success",
+        data: data
+      })
     }
   })
-  const secondquery = "INSERT INTO commands VALUES (?,?,?,?)";
-  pool.query(secondquery,Object.values(data), (error) => {
-    if (error){
-      res.json({
-        status: "failure", reason: error.code
-      });
-    } else {
-      res.json({
-        status: "success", data: data
-      });
-    }
-  });
 })
+
+// app.patch("/:commands", async (req, res) => {
+//   const data = {
+//     name: req.body.name,
+//     syntax: req.body.syntax,
+//     example: req.body.example,
+//     description: req.body.description
+//   }
+//   const query = "DELETE FROM commands WHERE name = ?"
+//   pool.query(query, [req.body.name], (error) => {
+//     if (error){
+//       res.json({
+//         status: "failure to delete", reason: error.code
+//       })
+//     } else{
+//       // res.json({
+//       //   status: "success"
+//       // })
+//     }
+//   })
+//   const secondquery = "INSERT INTO commands VALUES (?,?,?,?)";
+//   pool.query(secondquery,Object.values(data), (error) => {
+//     if (error){
+//       res.json({
+//         status: "failure", reason: error.code
+//       });
+//     } else {
+//       res.json({
+//         status: "success", data: data
+//       });
+//     }
+//   });
+// })
