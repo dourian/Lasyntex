@@ -1,6 +1,6 @@
 import "./App.css";
-import SearchBar from "./Components/Searchbar";
-import React, { useState } from "react";
+import SearchBar from "./components/Searchbar";
+import React, { useState, useEffect } from "react";
 import logo from "./assets/lasyntex.svg";
 
 // required reclaration to use react-latex library
@@ -45,7 +45,19 @@ function App() {
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
   const [searchQuery, setSearchQuery] = useState(query || "");
-  const filteredPosts = filterPosts(posts, searchQuery);
+  const [postList, setPosts] = useState([]);
+  const filteredPosts = filterPosts(postList, searchQuery);
+
+  useEffect(() => {
+    fetch("https://lasyntex-service-ftd5kbbgma-uc.a.run.app/allcommands")
+      .then((response) => response.json())
+      .then((data) => {
+        setPosts(data);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  });
 
   return (
     <div className="page_wrapper">
