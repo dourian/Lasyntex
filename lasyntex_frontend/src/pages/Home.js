@@ -14,7 +14,7 @@ const filterPosts = (posts, query) => {
 
   return posts.filter((post) => {
     const postName = post.name.toLowerCase();
-    return postName.includes(query);
+    return postName.includes(query.toLowerCase());
   });
 };
 

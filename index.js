@@ -8,7 +8,6 @@ var cors = require('cors')
 // import library and files
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-// const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');
 
 // Fixes: [Error] Origin http://localhost:3000 is not allowed by Access-Control-Allow-Origin. Status code: 200
 app.use(cors());
