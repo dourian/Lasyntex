@@ -9,9 +9,14 @@ const replace = (oldstr) => {
   return newstr;
 };
 
-function SearchResult({ name, syntax, example, description }) {
+
+function SearchResult({ name, syntax, example, description, index}) {
+  const rotateIcon = (index) => {
+    document.getElementById(`arrow${index}`).style.color = "white"
+  }
   return (
     <Collapsible
+      onOpen={console.log("clicked")}
       trigger={
         <div className="search_result">
           <div className="name_box">
@@ -20,7 +25,7 @@ function SearchResult({ name, syntax, example, description }) {
             </p>
           </div>
           <p className="syntax">{replace(syntax)}</p>
-          <div className="dropdown_icon">
+          <div className="dropdown_icon" id={`arrow${index}`}>
             <RiArrowDropDownLine />
           </div>
         </div>

@@ -52,13 +52,14 @@ function Home() {
           {/* list of results goes here */}
           <nav>
             <ul>
-                {filteredPosts.map((post) => (
+                {filteredPosts.map((post, index) => (
                 <li key={post.key}>
                   <SearchResult
                     name={post.name}
                     syntax={post.syntax}
                     example={post.example}
                     description={post.description}
+                    index={index}
                   ></SearchResult>
                 </li>
               ))}

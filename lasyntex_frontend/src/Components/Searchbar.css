@@ -51,6 +51,7 @@ input[type="text"] {
     padding: 5px;
     grid-column: 4;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .dropdown_results{
