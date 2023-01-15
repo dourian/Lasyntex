@@ -42,7 +42,7 @@ function SearchResult({ name, syntax, example, description, index}) {
           <p className="example_latex">
             Output:
             <br />
-            <Latex>{`$ ${replace(example)} $`}</Latex>
+            <Latex>{replace(example)}</Latex>
           </p>
         </div>
         <div className="description">
