@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/lasyntex.svg";
 import "../App.css";
 
-// required reclaration to use react-latex library
-var Latex = require("react-latex");
+import SearchResult from "../components/SearchResult";
 
 const filterPosts = (posts, query) => {
   if (!query) {
@@ -17,11 +16,7 @@ const filterPosts = (posts, query) => {
   });
 };
 
-const replace = (oldstr) => {
-  const newstr = oldstr.replaceAll("[backslash]", "\\");
-  console.log(newstr);
-  return newstr;
-}
+
 
 
 function Home() {
@@ -58,19 +53,11 @@ function Home() {
             <ul>
               {filteredPosts.map((post) => (
                 <li key={post.key}>
-                  {/* <Link to={`/${post.name}`}>
-
-              </Link> */}
-                  <div className="search_result">
-                    <p>
-                      Name: <Latex>{`$ ${post.name} $`}</Latex>
-                    </p>
-                    <p>Syntax: {replace(post.syntax)}</p>
-                    <p>
-                      Example: <Latex>{`$ ${replace(post.example)} $`}</Latex>
-                    </p>
-                    <p>Description: {post.description}</p>
-                  </div>
+                  <SearchResult name={post.name} 
+                                syntax={post.syntax}
+                                example={post.example}
+                                description={post.description}
+                  ></SearchResult>
                 </li>
               ))}
             </ul>
