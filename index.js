@@ -82,6 +82,32 @@ app.post("/", async (req, res) => {
   });
 });
 
+app.post("/addmultiple", async (req, res) => {
+  var ar = req.body.commands;
+  const query = "INSERT INTO commands VALUES (?,?,?,?)";
+  ar.forEach(element => {
+    const data = {
+      name: element.name,
+      syntax: element.syntax,
+      example: element.example,
+      description: element.description
+    }
+    pool.query(query, Object.values(data), (error) => {
+      if (error) {
+        res.json({
+          status: "failure",
+          reason: error.code,
+        })
+      } else {
+        res.json({
+          status: "success",
+          data: data,
+        });
+      }
+    })
+  });
+})
+
 app.delete("/:commands", async (req, res) => {
   const query = `DELETE FROM commands WHERE name= ?`;
   pool.query(query, [req.params.commands], (error) => {
