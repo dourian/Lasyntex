@@ -16,7 +16,7 @@ function SearchResult({ name, syntax, example, description, index}) {
   }
   return (
     <Collapsible
-      onOpen={console.log("clicked")}
+      // onOpen={console.log("clicked")}
       trigger={
         <div className="search_result">
           <div className="name_box">

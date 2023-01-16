@@ -106,3 +106,22 @@ input[type="text"] {
     grid-column: 2;
 }
 
+@media (max-width: 550px) {
+    .dropdown_results {
+        display: block;
+    }
+
+    .search_result {
+        display: block;
+    }
+    .name_box {
+        border-right: none;
+    }
+
+    .examples {
+        border-right: none;
+    }
+    .description {
+        padding: 5px
+    }
+}

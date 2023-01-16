@@ -68,3 +68,9 @@ a {
   color: #333;
   border: 1px solid black;
 }
+
+@media (max-width: 550px) {
+  nav ul {
+    width: auto;
+  }
+}
