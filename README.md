@@ -1,5 +1,5 @@
-# Lasyntex: Fullstack API
-
+# Lasyntex: API
+(if any of the links don't work.. then I ran out of credits)
 
 **API:** https://lasyntex-service-e5x5h3x7kq-uc.a.run.app
 
@@ -21,6 +21,7 @@
 
 ![Google_Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
