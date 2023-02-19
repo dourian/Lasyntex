@@ -11,9 +11,9 @@ const replace = (oldstr) => {
 
 
 function SearchResult({ name, syntax, example, description, index}) {
-  const rotateIcon = (index) => {
-    document.getElementById(`arrow${index}`).style.color = "white"
-  }
+  // const rotateIcon = (index) => {
+  //   document.getElementById(`arrow${index}`).style.color = "white"
+  // }
   return (
     <Collapsible
       // onOpen={console.log("clicked")}
