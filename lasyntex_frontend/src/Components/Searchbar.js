@@ -13,7 +13,6 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => (
             onKeyDown={e => {if (e.keyCode === 13) e.preventDefault()}}
         />
     </form>
-    
 );
 
 export default SearchBar;
