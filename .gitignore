@@ -1,1 +1,4 @@
 deploy.sh
+
+.env
+.DS_Store
