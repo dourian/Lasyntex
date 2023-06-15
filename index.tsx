@@ -1,46 +1,163 @@
 const express = require("express");
 const mysql = require("mysql");
-const app = express();
 
 require('dotenv').config()
 
-console.log(process.env.REACT_APP_DB_ENDPOINT)
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "lilliafeetpics",
+  database: "latexcommands"
+})
 
-const connection = mysql.createConnection({
-  port: process.env.REACT_APP_PORT,
-  host: process.env.REACT_APP_DB_ENDPOINT,
-  user: process.env.REACT_APP_DB_USER,
-  password: process.env.REACT_APP_DB_PASSWORD,
-  // database: process.env.REACT_APP_DB_NAME
-});
-
-connection.connect((err) => {
+db.connect((err) => {
   if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
-  }
-  console.log('Connected to the database');
-});
-
-app.use(express.json());
-
-app.listen(process.env.REACT_APP_PORT, () => {
-  console.log(`Server is running on port ${process.env.REACT_APP_PORT}`);
-});
-
-app.get("/", async (error, res) => {
-  // res.json({ status: "Lasyntex writing proofs since 2023" });
-  if (error) {
-    res.json({
-      status: "failure",
-      reason: error
-    })
+    throw err;
   } else {
-    res.json({ status: "Lasyntex writing proofs since 2023" });
+    console.log("MySql connected");
   }
+})
+
+const app = express();
+
+// create database
+
+app.get("/createdb", (req, res) => {
+  let sql = 'CREATE DATABASE latexcommands';
+  db.query(sql, (err, result) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log(result)
+      res.send('database created')
+    }
+  })
+})
+
+// create table
+
+app.get("/", async (req, res) => {
+  res.json({ status: "Lasyntex writing proofs since 2023" });
 });
 
-connection.end();
+app.get("/allcommands", async (req, res) => {
+  const query = "SELECT * FROM commands";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.log(error);
+      res.json({
+        status: "failure",
+        reason: error,
+      });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.get("/:commands", async (req, res) => {
+  const query = "SELECT * FROM commands WHERE name = ?";
+  db.query(query, [req.params.commands], (error, results) => {
+    if (!results[0]) {
+      res.json({ status: "Not found!" });
+    } else {
+      res.json(results[0]);
+    }
+  });
+});
+
+app.post("/", async (req, res) => {
+  const data = {
+    name: req.body.name,
+    syntax: req.body.syntax,
+    example: req.body.example,
+    description: req.body.description,
+  };
+  const query = "INSERT INTO commands VALUES (?,?,?,?)";
+  db.query(query, Object.values(data), (error) => {
+    if (error) {
+      res.json({
+        status: "failure",
+        reason: error.code,
+      });
+    } else {
+      res.json({
+        status: "success",
+        data: data,
+      });
+    }
+  });
+});
+
+app.post("/addmultiple", async (req, res) => {
+  var ar = req.body.commands;
+  const query = "INSERT INTO commands VALUES (?,?,?,?)";
+  ar.forEach(element => {
+    const data = {
+      name: element.name,
+      syntax: element.syntax,
+      example: element.example,
+      description: element.description
+    }
+    db.query(query, Object.values(data), (error) => {
+      if (error) {
+        res.json({
+          status: "failure",
+          reason: error.code,
+        })
+      } else {
+        res.json({
+          status: "success",
+          data: data,
+        });
+      }
+    })
+  });
+})
+
+app.delete("/:commands", async (req, res) => {
+  const query = `DELETE FROM commands WHERE name= ?`;
+  db.query(query, [req.params.commands], (error) => {
+    if (error) {
+      res.json({
+        status: "failure to delete",
+        reason: error.code,
+      });
+    } else {
+      res.json({
+        status: "success",
+      });
+    }
+  });
+});
+
+app.patch("/:commands", async (req, res) => {
+  const data = {
+    name: req.body.name,
+    syntax: req.body.syntax,
+    example: req.body.example,
+    description: req.body.description,
+  };
+  const query = `UPDATE commands SET name = '${data.name}', syntax = '${data.syntax}', example = '${data.example}', description = '${data.description}' WHERE name = ?`;
+  db.query(query, [req.body.name], (error) => {
+    if (error) {
+      res.json({
+        status: "failure to update",
+        reason: error.code,
+      });
+    } else {
+      res.json({
+        status: "success",
+        data: data,
+      });
+    }
+  });
+});
+
+app.listen('3001', () => {
+  console.log('server started on port 3001')
+})
+
 
 // // Use cors
 // var cors = require("cors");
@@ -69,120 +186,4 @@ connection.end();
 //   console.log(`Lasyntex Rest API listening on port ${port}`);
 // });
 
-// app.get("/", async (req, res) => {
-//   res.json({ status: "Lasyntex writing proofs since 2023" });
-// });
 
-// app.get("/allcommands", async (req, res) => {
-//   const query = "SELECT * FROM commands";
-//   pool.query(query, (error, results) => {
-//     if (error) {
-//       console.log(error);
-//       res.json({
-//         status: "failure",
-//         reason: error,
-//       });
-//     } else {
-//       res.json(results);
-//     }
-//   });
-// });
-
-// app.get("/:commands", async (req, res) => {
-//   const query = "SELECT * FROM commands WHERE name = ?";
-//   pool.query(query, [req.params.commands], (error, results) => {
-//     if (!results[0]) {
-//       res.json({ status: "Not found!" });
-//     } else {
-//       res.json(results[0]);
-//     }
-//   });
-// });
-
-// app.post("/", async (req, res) => {
-//   const data = {
-//     name: req.body.name,
-//     syntax: req.body.syntax,
-//     example: req.body.example,
-//     description: req.body.description,
-//   };
-//   const query = "INSERT INTO commands VALUES (?,?,?,?)";
-//   pool.query(query, Object.values(data), (error) => {
-//     if (error) {
-//       res.json({
-//         status: "failure",
-//         reason: error.code,
-//       });
-//     } else {
-//       res.json({
-//         status: "success",
-//         data: data,
-//       });
-//     }
-//   });
-// });
-
-// app.post("/addmultiple", async (req, res) => {
-//   var ar = req.body.commands;
-//   const query = "INSERT INTO commands VALUES (?,?,?,?)";
-//   ar.forEach(element => {
-//     const data = {
-//       name: element.name,
-//       syntax: element.syntax,
-//       example: element.example,
-//       description: element.description
-//     }
-//     pool.query(query, Object.values(data), (error) => {
-//       if (error) {
-//         res.json({
-//           status: "failure",
-//           reason: error.code,
-//         })
-//       } else {
-//         res.json({
-//           status: "success",
-//           data: data,
-//         });
-//       }
-//     })
-//   });
-// })
-
-// app.delete("/:commands", async (req, res) => {
-//   const query = `DELETE FROM commands WHERE name= ?`;
-//   pool.query(query, [req.params.commands], (error) => {
-//     if (error) {
-//       res.json({
-//         status: "failure to delete",
-//         reason: error.code,
-//       });
-//     } else {
-//       res.json({
-//         status: "success",
-//       });
-//     }
-//   });
-// });
-
-// app.patch("/:commands", async (req, res) => {
-//   const data = {
-//     name: req.body.name,
-//     syntax: req.body.syntax,
-//     example: req.body.example,
-//     description: req.body.description,
-//   };
-//   const query = `UPDATE commands SET name = '${data.name}', syntax = '${data.syntax}', example = '${data.example}', description = '${data.description}' WHERE name = ?`;
-//   pool.query(query, [req.body.name], (error) => {
-//     if (error) {
-//       res.json({
-//         status: "failure to update",
-//         reason: error.code,
-//       });
-//     } else {
-//       res.json({
-//         status: "success",
-//         data: data,
-//       });
-//     }
-//   });
-// });
