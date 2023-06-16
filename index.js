@@ -1,3 +1,4 @@
+var bodyParser = require('body-parser')
 const express = require("express");
 const mysql = require("mysql");
 var cors = require("cors");
@@ -6,6 +7,12 @@ require('dotenv').config()
 
 const dbUrl = 'mysql://bb6feb847afa04:b6ae9368@us-cdbr-east-06.cleardb.net/heroku_e4902988adbe801?reconnect=true';
 const dbUrlObj = new URL(dbUrl);
+
+// create application/json parser
+var jsonParser = bodyParser.json()
+ 
+// create application/x-www-form-urlencoded parser
+// var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 console.log(dbUrlObj.host)
 console.log(dbUrlObj.username)
@@ -73,7 +80,7 @@ app.get("/:commands", async (req, res) => {
   });
 });
 
-app.post("/", async (req, res) => {
+app.post("/", jsonParser, async (req, res) => {
   console.log(req.body)
   const data = {
     name: req.body.name,
@@ -82,22 +89,22 @@ app.post("/", async (req, res) => {
     description: req.body.description,
   };
   const query = "INSERT INTO commands VALUES (?,?,?,?)";
-  // db.query(query, Object.values(data), (error) => {
-  //   if (error) {
-  //     res.json({
-  //       status: "failure",
-  //       reason: error.code,
-  //     });
-  //   } else {
-  //     res.json({
-  //       status: "success",
-  //       data: data,
-  //     });
-  //   }
-  // });
+  db.query(query, Object.values(data), (error) => {
+    if (error) {
+      res.json({
+        status: "failure",
+        reason: error.code,
+      });
+    } else {
+      res.json({
+        status: "success",
+        data: data,
+      });
+    }
+  });
 });
 
-app.post("/addmultiple", async (req, res) => {
+app.post("/addmultiple", jsonParser, async (req, res) => {
   var ar = req.body.commands;
   const query = "INSERT INTO commands VALUES (?,?,?,?)";
   ar.forEach(element => {
@@ -139,7 +146,8 @@ app.delete("/:commands", async (req, res) => {
   });
 });
 
-app.patch("/:commands", async (req, res) => {
+app.patch("/:commands", jsonParser, async (req, res) => {
+  // console.log(req)
   const data = {
     name: req.body.name,
     syntax: req.body.syntax,
