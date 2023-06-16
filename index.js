@@ -61,6 +61,7 @@ app.get("/allcommands", async (req, res) => {
   });
 });
 
+
 app.get("/:commands", async (req, res) => {
   const query = "SELECT * FROM commands WHERE name = ?";
   db.query(query, [req.params.commands], (error, results) => {
