@@ -47,7 +47,7 @@ function Home() {
   const filteredPosts = filterPosts(postList, searchQuery);
 
   useEffect(() => {
-    fetch("https://lasyntex-service-ftd5kbbgma-uc.a.run.app/allcommands")
+    fetch("/allcommands")
       .then((response) => response.json())
       .then((data) => {
         // sorts array lexigraphically first

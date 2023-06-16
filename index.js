@@ -13,7 +13,9 @@ const db = mysql.createConnection({
   host: dbUrlObj.host,
   user: dbUrlObj.username,
   password: dbUrlObj.password,
-  database: dbUrlObj.pathname.substr(1)
+  database: dbUrlObj.pathname.substr(1),
+  reconnect: true, // Enable automatic reconnection
+  reconnectInterval: 2000, // Interval between reconnection attempts (in milliseconds)
 });
 
 db.connect((err) => {
