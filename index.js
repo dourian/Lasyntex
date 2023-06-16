@@ -3,12 +3,15 @@ const mysql = require("mysql");
 
 require('dotenv').config()
 
+const dbUrl = 'mysql://bb6feb847afa04:b6ae9368@us-cdbr-east-06.cleardb.net/heroku_e4902988adbe801?reconnect=true';
+const dbUrlObj = new URL(dbUrl);
+
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "lilliafeetpics",
-  database: "latexcommands"
-})
+  host: dbUrlObj.host,
+  user: dbUrlObj.username,
+  password: dbUrlObj.password,
+  database: dbUrlObj.pathname.substr(1)
+});
 
 db.connect((err) => {
   if (err) {
