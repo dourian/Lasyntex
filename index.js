@@ -1,5 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
+var cors = require("cors");
 
 require('dotenv').config()
 
@@ -48,6 +49,7 @@ db.getConnection((err) => {
 // handleDisconnect();
 
 const app = express();
+app.use(cors());
 
 // create database
 
@@ -191,7 +193,7 @@ app.listen(port, () => {
 
 
 // // Use cors
-// var cors = require("cors");
+
 
 // // import library and files
 // const swaggerUi = require("swagger-ui-express");

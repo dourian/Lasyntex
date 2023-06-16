@@ -47,7 +47,7 @@ function Home() {
   const filteredPosts = filterPosts(postList, searchQuery);
 
   useEffect(() => {
-    fetch("/allcommands")
+    fetch("https://lasyntex.herokuapp.com/allcommands")
       .then((response) => response.json())
       .then((data) => {
         // sorts array lexigraphically first
