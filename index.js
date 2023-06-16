@@ -6,7 +6,8 @@ require('dotenv').config()
 const dbUrl = 'mysql://bb6feb847afa04:b6ae9368@us-cdbr-east-06.cleardb.net/heroku_e4902988adbe801?reconnect=true';
 const dbUrlObj = new URL(dbUrl);
 
-console.log(process.env.PORT)
+console.log(dbUrlObj.host)
+console.log(dbUrlObj.username)
 
 const db = mysql.createConnection({
   host: dbUrlObj.host,
