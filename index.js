@@ -1,6 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
-var cors = require("cors");
+// var cors = require("cors");
 
 require('dotenv').config()
 
@@ -15,19 +15,15 @@ const db = mysql.createPool({
   user: dbUrlObj.username,
   password: dbUrlObj.password,
   database: dbUrlObj.pathname.substr(1),
-  reconnect: true, // Enable automatic reconnection
-  reconnectInterval: 2000, // Interval between reconnection attempts (in milliseconds)
 });
 
-db.getConnection();
-
-// db.getConnection((err) => {
-//   if (err) {
-//     throw err;
-//   } else {
-//     console.log("MySql connected");
-//   }
-// })
+db.getConnection((err) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log("MySql connected");
+  }
+})
 
 // var connection;
 // function handleDisconnect() {
@@ -51,7 +47,7 @@ db.getConnection();
 // handleDisconnect();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 // create database
 
