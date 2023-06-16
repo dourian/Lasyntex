@@ -6,6 +6,8 @@ require('dotenv').config()
 const dbUrl = 'mysql://bb6feb847afa04:b6ae9368@us-cdbr-east-06.cleardb.net/heroku_e4902988adbe801?reconnect=true';
 const dbUrlObj = new URL(dbUrl);
 
+console.log(process.env.PORT)
+
 const db = mysql.createConnection({
   host: dbUrlObj.host,
   user: dbUrlObj.username,
@@ -157,8 +159,10 @@ app.patch("/:commands", async (req, res) => {
   });
 });
 
-app.listen('3001', () => {
-  console.log('server started on port 3001')
+let port = process.env.PORT || 3001
+
+app.listen(port, () => {
+  console.log(`server started on ${process.env.PORT}`)
 })
 
 
