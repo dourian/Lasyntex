@@ -1,6 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
-// var cors = require("cors");
+var cors = require("cors");
 
 require('dotenv').config()
 
@@ -25,45 +25,22 @@ db.getConnection((err) => {
   }
 })
 
-// var connection;
-// function handleDisconnect() {
-//     connection = mysql.createConnection(db);  // Recreate the connection, since the old one cannot be reused.
-//     connection.connect( function onConnect(err) {   // The server is either down
-//         if (err) {                                  // or restarting (takes a while sometimes).
-//             console.log('error when connecting to db:', err);
-//             setTimeout(handleDisconnect, 10000);    // We introduce a delay before attempting to reconnect,
-//         }                                           // to avoid a hot loop, and to allow our node script to
-//     });                                             // process asynchronous requests in the meantime.
-//                                                     // If you're also serving http, display a 503 error.
-//     connection.on('error', function onError(err) {
-//         console.log('db error', err);
-//         if (err.code == 'PROTOCOL_CONNECTION_LOST') {   // Connection to the MySQL server is usually
-//             handleDisconnect();                         // lost due to either server restart, or a
-//         } else {                                        // connnection idle timeout (the wait_timeout
-//             throw err;                                  // server variable configures this)
-//         }
-//     });
-// }
-// handleDisconnect();
-
 const app = express();
-// app.use(cors());
+app.use(cors());
 
 // create database
 
-app.get("/createdb", (req, res) => {
-  let sql = 'CREATE DATABASE latexcommands';
-  db.query(sql, (err, result) => {
-    if (err) {
-      throw err;
-    } else {
-      console.log(result)
-      res.send('database created')
-    }
-  })
-})
-
-// create table
+// app.get("/createdb", (req, res) => {
+//   let sql = 'CREATE DATABASE latexcommands';
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       throw err;
+//     } else {
+//       console.log(result)
+//       res.send('database created')
+//     }
+//   })
+// })
 
 app.get("/", async (req, res) => {
   res.json({ status: "Lasyntex writing proofs since 2023" });
