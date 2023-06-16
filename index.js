@@ -74,6 +74,7 @@ app.get("/:commands", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
+  console.log(req.body)
   const data = {
     name: req.body.name,
     syntax: req.body.syntax,
@@ -81,19 +82,19 @@ app.post("/", async (req, res) => {
     description: req.body.description,
   };
   const query = "INSERT INTO commands VALUES (?,?,?,?)";
-  db.query(query, Object.values(data), (error) => {
-    if (error) {
-      res.json({
-        status: "failure",
-        reason: error.code,
-      });
-    } else {
-      res.json({
-        status: "success",
-        data: data,
-      });
-    }
-  });
+  // db.query(query, Object.values(data), (error) => {
+  //   if (error) {
+  //     res.json({
+  //       status: "failure",
+  //       reason: error.code,
+  //     });
+  //   } else {
+  //     res.json({
+  //       status: "success",
+  //       data: data,
+  //     });
+  //   }
+  // });
 });
 
 app.post("/addmultiple", async (req, res) => {
