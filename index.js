@@ -19,13 +19,15 @@ const db = mysql.createPool({
   reconnectInterval: 2000, // Interval between reconnection attempts (in milliseconds)
 });
 
-db.getConnection((err) => {
-  if (err) {
-    throw err;
-  } else {
-    console.log("MySql connected");
-  }
-})
+db.getConnection();
+
+// db.getConnection((err) => {
+//   if (err) {
+//     throw err;
+//   } else {
+//     console.log("MySql connected");
+//   }
+// })
 
 // var connection;
 // function handleDisconnect() {
