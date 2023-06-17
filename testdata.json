@@ -184,5 +184,611 @@
         "syntax": "[backslash]Updownarrow",
         "example": "x [backslash]Updownarrow y",
         "description": "The up-down arrow with horizontal bar symbol represents a bidirectional flow or equivalence in both upward and downward directions."
-      }
+      },
+      {
+        "name": "Aleph",
+        "syntax": "[backslash]aleph",
+        "example": "[backslash]aleph",
+        "description": "The aleph symbol represents the cardinality of infinite sets."
+      },
+      {
+        "name": "Prime",
+        "syntax": "[backslash]prime",
+        "example": "0[backslash]prime",
+        "description": "The prime symbol represents a derivative or a value modified by a transformation."
+      },
+      {
+        "name": "H-Bar",
+        "syntax": "[backslash]hbar",
+        "example": "[backslash]hbar",
+        "description": "The h-bar symbol represents the reduced Planck constant."
+      },
+      {
+        "name": "Empty Set",
+        "syntax": "[backslash]emptyset",
+        "example": "[backslash]emptyset",
+        "description": "The empty set symbol represents a set with no elements."
+      },
+      {
+        "name": "Imath",
+        "syntax": "[backslash]imath",
+        "example": "[backslash]imath",
+        "description": "The imath symbol represents the dotless version of the letter i."
+      },
+      {
+        "name": "Nabla",
+        "syntax": "[backslash]nabla",
+        "example": "[backslash]nabla",
+        "description": "The nabla symbol represents the del operator or gradient."
+      },
+      {
+        "name": "Jmath",
+        "syntax": "[backslash]jmath",
+        "example": "[backslash]jmath",
+        "description": "The jmath symbol represents the dotless version of the letter j."
+      },
+      {
+        "name": "Square Root",
+        "syntax": "[backslash]surd",
+        "example": "[backslash]surd",
+        "description": "The square root symbol represents the principal square root of a number."
+      },
+      {
+        "name": "Script L",
+        "syntax": "[backslash]ell",
+        "example": "[backslash]ell",
+        "description": "The script L symbol is a calligraphic variant of the letter 'l'."
+      },
+      {
+        "name": "Top",
+        "syntax": "[backslash]top",
+        "example": "[backslash]top",
+        "description": "The top symbol represents the top element or proposition in a lattice."
+      },
+      {
+        "name": "Weierstrass P",
+        "syntax": "[backslash]wp",
+        "example": "[backslash]wp",
+        "description": "The Weierstrass p symbol represents a Weierstrass elliptic function."
+      },
+      {
+        "name": "Perpendicular",
+        "syntax": "[backslash]bot",
+        "example": "[backslash]bot",
+        "description": "The perpendicular symbol represents a right angle or orthogonality."
+      },
+      {
+        "name": "Real Numbers",
+        "syntax": "[backslash]Re",
+        "example": "[backslash]Re",
+        "description": "The symbol represents the set of real numbers."
+      },
+      {
+        "name": "Imaginary Numbers",
+        "syntax": "[backslash]Im",
+        "example": "[backslash]Im",
+        "description": "The symbol represents the set of imaginary numbers."
+      },
+      {
+        "name": "Angle",
+        "syntax": "[backslash]angle",
+        "example": "6[backslash]angle",
+        "description": "The angle symbol represents a geometric angle."
+      },
+      {
+        "name": "Partial Differential",
+        "syntax": "[backslash]partial",
+        "example": "[backslash]partial",
+        "description": "The partial differential symbol represents a partial derivative."
+      },
+      {
+        "name": "Triangle",
+        "syntax": "[backslash]triangle",
+        "example": "4[backslash]triangle",
+        "description": "The triangle symbol represents a mathematical triangle."
+      },
+      {
+        "name": "Infinity",
+        "syntax": "[backslash]infty",
+        "example": "[backslash]infty",
+        "description": "The infinity symbol represents an infinitely large quantity or limit."
+      },
+      {
+        "name": "White Diamond",
+        "syntax": "[backslash]Diamond",
+        "example": "[backslash]Diamond",
+        "description": "The white diamond symbol represents a diamond shape."
+      },
+      {
+        "name": "For All",
+        "syntax": "[backslash]forall",
+        "example": "[backslash]forall",
+        "description": "The symbol represents a universal quantifier, meaning 'for all'."
+      },
+      {
+        "name": "Exists",
+        "syntax": "[backslash]exists",
+        "example": "[backslash]exists",
+        "description": "The symbol represents an existential quantifier, meaning 'there exists'."
+      },
+      {
+        "name": "Clubsuit",
+        "syntax": "[backslash]clubsuit",
+        "example": "[backslash]clubsuit",
+        "description": "The clubsuit symbol represents the clubs suit in playing cards."
+      },
+      {
+        "name": "Negation",
+        "syntax": "[backslash]neg",
+        "example": "[backslash]neg",
+        "description": "The negation symbol represents logical negation or 'not'."
+      },
+      {
+        "name": "Black Diamond",
+        "syntax": "[backslash]diamondsuit",
+        "example": "[backslash]diamondsuit",
+        "description": "The black diamond symbol represents the diamond suit in playing cards."
+      },
+      {
+        "name": "Flat",
+        "syntax": "[backslash]flat",
+        "example": "[backslash]flat",
+        "description": "The flat symbol represents a musical flat note."
+      },
+      {
+        "name": "Heart",
+        "syntax": "[backslash]heartsuit",
+        "example": "[backslash]heartsuit",
+        "description": "The heartsuit symbol represents the heart suit in playing cards."
+      },
+      {
+        "name": "Natural",
+        "syntax": "[backslash]natural",
+        "example": "[backslash]natural",
+        "description": "The natural symbol represents a musical natural note."
+      },
+      {
+        "name": "Spadesuit",
+        "syntax": "[backslash]spadesuit",
+        "example": "[backslash]spadesuit",
+        "description": "The spadesuit symbol represents the spade suit in playing cards."
+      },
+      {
+        "name": "Mho",
+        "syntax": "[backslash]mho",
+        "example": "[backslash]mho",
+        "description": "The mho symbol represents the SI unit of electrical conductance."
+      },
+      {
+        "name": "Arc Cosine",
+        "syntax": "[backslash]arccos",
+        "example": "[backslash]arccos(x+1)",
+        "description": "The arc cosine function represents the inverse cosine trigonometric function."
+      },
+      {
+        "name": "Cosecant",
+        "syntax": "[backslash]csc",
+        "example": "[backslash]csc(x)",
+        "description": "The cosecant function represents the reciprocal of the sine function."
+      },
+      {
+        "name": "Kernel",
+        "syntax": "[backslash]ker",
+        "example": "[backslash]ker(f)",
+        "description": "The kernel represents the null space of a linear transformation or the root of a function."
+      },
+      {
+        "name": "Minimum",
+        "syntax": "[backslash]min",
+        "example": "[backslash]min(x, y)",
+        "description": "The minimum function represents the smaller of two or more values."
+      },
+      {
+        "name": "Arc Sine",
+        "syntax": "[backslash]arcsin",
+        "example": "[backslash]arcsin(x-1)",
+        "description": "The arc sine function represents the inverse sine trigonometric function."
+      },
+      {
+        "name": "Degree",
+        "syntax": "[backslash]deg",
+        "example": "[backslash]deg(45[backslash]circ)",
+        "description": "The degree function represents the measurement of angles in degrees."
+      },
+      {
+        "name": "Base-10 Logarithm",
+        "syntax": "[backslash]lg",
+        "example": "[backslash]lg(100)",
+        "description": "The base-10 logarithm function represents the logarithm to the base 10."
+      },
+      {
+        "name": "Probability",
+        "syntax": "[backslash]Pr",
+        "example": "[backslash]Pr(A)",
+        "description": "The probability function represents the probability of an event."
+      },
+      {
+        "name": "Arc Tangent",
+        "syntax": "[backslash]arctan",
+        "example": "[backslash]arctan(x)",
+        "description": "The arc tangent function represents the inverse tangent trigonometric function."
+      },
+      {
+        "name": "Determinant",
+        "syntax": "[backslash]det",
+        "example": "[backslash]det(A)",
+        "description": "The determinant represents a value computed from the elements of a matrix."
+      },
+      {
+        "name": "Limit",
+        "syntax": "[backslash]lim",
+        "example": "[backslash]lim_{x[backslash]to[backslash]infty} f(x)",
+        "description": "The limit represents the value approached by a function as the input approaches a certain value or infinity."
+      },
+      {
+        "name": "Secant",
+        "syntax": "[backslash]sec",
+        "example": "[backslash]sec(x)",
+        "description": "The secant function represents the reciprocal of the cosine function."
+      },
+      {
+        "name": "Argument",
+        "syntax": "[backslash]arg",
+        "example": "[backslash]arg(z)",
+        "description": "The argument represents the angle formed between the positive x-axis and a complex number in the complex plane."
+      },
+      {
+        "name": "Dimension",
+        "syntax": "[backslash]dim",
+        "example": "[backslash]dim(V)",
+        "description": "The dimension represents the number of basis vectors in a vector space or the size of a set."
+      },
+      {
+        "name": "Limit Inferior",
+        "syntax": "[backslash]liminf",
+        "example": "[backslash]liminf_{n[backslash]to[backslash]infty} a_n",
+        "description": "The limit inferior represents the limit of the infimum of a sequence or a function."
+      },
+      {
+        "name": "Sine",
+        "syntax": "[backslash]sin",
+        "example": "[backslash]sin(x)",
+        "description": "The sine function represents the trigonometric sine of an angle."
+      },
+      {
+        "name": "Cosine",
+        "syntax": "[backslash]cos",
+        "example": "[backslash]cos(x)",
+        "description": "The cosine function represents the trigonometric cosine of an angle."
+      },
+      {
+        "name": "Exponential",
+        "syntax": "[backslash]exp",
+        "example": "[backslash]exp(x)",
+        "description": "The exponential function represents the base-e exponential function."
+      },
+      {
+        "name": "Limit Superior",
+        "syntax": "[backslash]limsup",
+        "example": "[backslash]limsup_{n[backslash]to[backslash]infty} a_n",
+        "description": "The limit superior represents the limit of the supremum of a sequence or a function."
+      },
+      {
+        "name": "Hyperbolic Sine",
+        "syntax": "[backslash]sinh",
+        "example": "[backslash]sinh(x)",
+        "description": "The hyperbolic sine function represents the hyperbolic sine of a real number."
+      },
+      {
+        "name": "Hyperbolic Cosine",
+        "syntax": "[backslash]cosh",
+        "example": "[backslash]cosh(x)",
+        "description": "The hyperbolic cosine function represents the hyperbolic cosine of a real number."
+      },
+      {
+        "name": "Greatest Common Divisor",
+        "syntax": "[backslash]gcd",
+        "example": "[backslash]gcd(a, b)",
+        "description": "The greatest common divisor represents the largest positive integer that divides two or more integers without leaving a remainder."
+      },
+      {
+        "name": "Natural Logarithm",
+        "syntax": "[backslash]ln",
+        "example": "[backslash]ln(x)",
+        "description": "The natural logarithm function represents the logarithm to the base e."
+      },
+      {
+        "name": "Supremum",
+        "syntax": "[backslash]sup",
+        "example": "[backslash]sup_{x[backslash]in S} f(x)",
+        "description": "The supremum represents the least upper bound or the maximum value of a set."
+      },
+      {
+        "name": "Cotangent",
+        "syntax": "[backslash]cot",
+        "example": "[backslash]cot(x)",
+        "description": "The cotangent function represents the reciprocal of the tangent function."
+      },
+      {
+        "name": "Homomorphism",
+        "syntax": "[backslash]hom",
+        "example": "[backslash]hom(G, H)",
+        "description": "The homomorphism represents a structure-preserving map between two algebraic structures."
+      },
+      {
+        "name": "Logarithm",
+        "syntax": "[backslash]log",
+        "example": "[backslash]log_b(x)",
+        "description": "The logarithm function represents the logarithm to a specified base."
+      },
+      {
+        "name": "Tangent",
+        "syntax": "[backslash]tan",
+        "example": "[backslash]tan(x)",
+        "description": "The tangent function represents the trigonometric tangent of an angle."
+      },
+      {
+        "name": "Hyperbolic Cotangent",
+        "syntax": "[backslash]coth",
+        "example": "[backslash]coth(x)",
+        "description": "The hyperbolic cotangent function represents the hyperbolic cotangent of a real number."
+      },
+      {
+        "name": "Infimum",
+        "syntax": "[backslash]inf",
+        "example": "[backslash]inf_{n[backslash]in[backslash]mathbb{N}} a_n",
+        "description": "The infimum represents the greatest lower bound or the minimum value of a set."
+      },
+      {
+        "name": "Maximum",
+        "syntax": "[backslash]max",
+        "example": "[backslash]max(x, y)",
+        "description": "The maximum function represents the larger of two or more values."
+      },
+      {
+        "name": "Hyperbolic Tangent",
+        "syntax": "[backslash]tanh",
+        "example": "[backslash]tanh(x)",
+        "description": "The hyperbolic tangent function represents the hyperbolic tangent of a real number."
+      },
+      {
+        "name": "Less Than or Equal To",
+        "syntax": "[backslash]leq",
+        "example": "a [backslash]leq b",
+        "description": "The less than or equal to symbol represents the comparison of two quantities where the left-hand side is less than or equal to the right-hand side."
+      },
+      {
+        "name": "Greater Than or Equal To",
+        "syntax": "[backslash]geq",
+        "example": "a [backslash]geq b",
+        "description": "The greater than or equal to symbol represents the comparison of two quantities where the left-hand side is greater than or equal to the right-hand side."
+      },
+      {
+        "name": "Precedes",
+        "syntax": "[backslash]prec",
+        "example": "a [backslash]prec b",
+        "description": "The precedes symbol represents a partial ordering relation where the left-hand side precedes the right-hand side."
+      },
+      {
+        "name": "Succeeds",
+        "syntax": "[backslash]succ",
+        "example": "a [backslash]succ b",
+        "description": "The succeeds symbol represents a partial ordering relation where the left-hand side succeeds the right-hand side."
+      },
+      {
+        "name": "Precedes or Equal To",
+        "syntax": "[backslash]preceq",
+        "example": "a [backslash]preceq b",
+        "description": "The precedes or equal to symbol represents a partial ordering relation where the left-hand side precedes or is equal to the right-hand side."
+      },
+      {
+        "name": "Succeeds or Equal To",
+        "syntax": "[backslash]succeq",
+        "example": "a [backslash]succeq b",
+        "description": "The succeeds or equal to symbol represents a partial ordering relation where the left-hand side succeeds or is equal to the right-hand side."
+      },
+      {
+        "name": "Much Less Than",
+        "syntax": "[backslash]ll",
+        "example": "a [backslash]ll b",
+        "description": "The much less than symbol represents an ordering relation where the left-hand side is much less than the right-hand side."
+      },
+      {
+        "name": "Much Greater Than",
+        "syntax": "[backslash]gg",
+        "example": "a [backslash]gg b",
+        "description": "The much greater than symbol represents an ordering relation where the left-hand side is much greater than the right-hand side."
+      },
+      {
+        "name": "Subset",
+        "syntax": "[backslash]subset",
+        "example": "A [backslash]subset B",
+        "description": "The subset symbol represents the inclusion of one set in another, where all elements of the first set are also elements of the second set."
+      },
+      {
+        "name": "Superset",
+        "syntax": "[backslash]supset",
+        "example": "A [backslash]supset B",
+        "description": "The superset symbol represents the inclusion of one set containing all elements of another set."
+      },
+      {
+        "name": "Subset or Equal To",
+        "syntax": "[backslash]subseteq",
+        "example": "A [backslash]subseteq B",
+        "description": "The subset or equal to symbol represents the inclusion of one set in another, including the case where the two sets are equal."
+      },
+      {
+        "name": "Superset or Equal To",
+        "syntax": "[backslash]supseteq",
+        "example": "A [backslash]supseteq B",
+        "description": "The superset or equal to symbol represents the inclusion of one set containing all elements of another set, including the case where the two sets are equal."
+      },
+      {
+        "name": "Square Subset",
+        "syntax": "[backslash]sqsubset",
+        "example": "A [backslash]sqsubset B",
+        "description": "The square subset symbol represents a specialized form of subset relation using a square instead of an angle bracket."
+      },
+      {
+        "name": "Square Superset",
+        "syntax": "[backslash]sqsupset",
+        "example": "A [backslash]sqsupset B",
+        "description": "The square superset symbol represents a specialized form of superset relation using a square instead of an angle bracket."
+      },
+      {
+        "name": "Square Subset or Equal To",
+        "syntax": "[backslash]sqsubseteq",
+        "example": "A [backslash]sqsubseteq B",
+        "description": "The square subset or equal to symbol represents a specialized form of subset relation using a square instead of an angle bracket, including the case where the two sets are equal."
+      },
+      {
+        "name": "Square Superset or Equal To",
+        "syntax": "[backslash]sqsupseteq",
+        "example": "A [backslash]sqsupseteq B",
+        "description": "The square superset or equal to symbol represents a specialized form of superset relation using a square instead of an angle bracket, including the case where the two sets are equal."
+      },
+      {
+        "name": "Element Of",
+        "syntax": "[backslash]in",
+        "example": "x [backslash]in A",
+        "description": "The element of symbol represents that an object belongs to a set."
+      },
+      {
+        "name": "Contains",
+        "syntax": "[backslash]ni",
+        "example": "A [backslash]ni x",
+        "description": "The contains symbol represents that a set contains an object."
+      },
+      {
+        "name": "Turnstile",
+        "syntax": "[backslash]vdash",
+        "example": "A, B [backslash]vdash C",
+        "description": "The turnstile symbol represents a logical or syntactic consequence relation."
+      },
+      {
+        "name": "Smile",
+        "syntax": "[backslash]smile",
+        "example": "x [backslash]smile y",
+        "description": "The smile symbol represents a binary relation that denotes a positive or favorable relation between two objects."
+      },
+      {
+        "name": "Divides",
+        "syntax": "[backslash]mid",
+        "example": "a [backslash]mid b",
+        "description": "The divides symbol represents that a number divides another number without leaving a remainder."
+      },
+      {
+        "name": "Frown",
+        "syntax": "[backslash]frown",
+        "example": "x [backslash]frown y",
+        "description": "The frown symbol represents a binary relation that denotes a negative or unfavorable relation between two objects."
+      },
+      {
+        "name": "Parallel",
+        "syntax": "[backslash]parallel",
+        "example": "l [backslash]parallel m",
+        "description": "The parallel symbol represents that two lines are parallel to each other."
+      },
+      {
+        "name": "Not Equal To",
+        "syntax": "[backslash]neq",
+        "example": "a [backslash]neq b",
+        "description": "The not equal to symbol represents the inequality relation where the left-hand side is not equal to the right-hand side."
+      },
+      {
+        "name": "Perpendicular",
+        "syntax": "[backslash]perp",
+        "example": "AB [backslash]perp CD",
+        "description": "The perpendicular symbol represents that two lines or line segments are perpendicular to each other."
+      },
+      {
+        "name": "Equivalent",
+        "syntax": "[backslash]equiv",
+        "example": "a [backslash]equiv b",
+        "description": "The equivalent symbol represents the equivalence relation where the left-hand side is equivalent to the right-hand side."
+      },
+      {
+        "name": "Congruent",
+        "syntax": "[backslash]cong",
+        "example": "a [backslash]cong b",
+        "description": "The congruent symbol represents the congruence relation where the left-hand side is congruent to the right-hand side."
+      },
+      {
+        "name": "Similar",
+        "syntax": "[backslash]sim",
+        "example": "A [backslash]sim B",
+        "description": "The similar symbol represents that two objects are similar to each other."
+      },
+      {
+        "name": "Bowtie",
+        "syntax": "[backslash]bowtie",
+        "example": "A [backslash]bowtie B",
+        "description": "The bowtie symbol represents an assertion that two separate conditions or objects are connected or linked together."
+      },
+      {
+        "name": "Proportional To",
+        "syntax": "[backslash]propto",
+        "example": "a [backslash]propto b",
+        "description": "The proportional to symbol represents a proportional relationship between two quantities."
+      },
+      {
+        "name": "Approximately Equal To",
+        "syntax": "[backslash]approx",
+        "example": "a [backslash]approx b",
+        "description": "The approximately equal to symbol represents an approximation of equality between two quantities."
+      },
+      {
+        "name": "Dot Equals",
+        "syntax": "[backslash]doteq",
+        "example": "a [backslash]doteq b",
+        "description": "The dot equals symbol represents a mathematical relation where the left-hand side is defined to be equal to the right-hand side."
+      },
+      {
+        "name": "Join",
+        "syntax": "[backslash]Join",
+        "example": "A [backslash]Join B",
+        "description": "The join symbol represents the join operation in relational algebra, combining rows from two tables based on a common attribute."
+      },
+      {
+        "name": "Curly Brace",
+        "syntax": "{[backslash]}{[backslash]}",
+        "example": "{A, B, C}",
+        "description": "The curly brace symbols are used to enclose sets or indicate grouping in mathematical expressions."
+        },
+        {
+        "name": "Right Curly Brace",
+        "syntax": "{[backslash]}{[backslash]}",
+        "example": "{x [backslash]}{[backslash]}{[backslash]}{[backslash]} y}",
+        "description": "The right curly brace symbol is used to close a set or indicate the end of a grouped expression."
+        },
+        {
+        "name": "Floor",
+        "syntax": "[backslash]lfloor [backslash]rfloor",
+        "example": "[backslash]lfloor x [backslash]rfloor",
+        "description": "The floor symbols represent the greatest integer less than or equal to a given number."
+        },
+        {
+        "name": "Ceiling",
+        "syntax": "[backslash]lceil [backslash]rceil",
+        "example": "[backslash]lceil x [backslash]rceil",
+        "description": "The ceiling symbols represent the smallest integer greater than or equal to a given number."
+        },
+        {
+        "name": "Angle Brackets",
+        "syntax": "[backslash]langle [backslash]rangle",
+        "example": "[backslash]langle a, b [backslash]rangle",
+        "description": "The angle brackets symbols are used to enclose vectors or denote an inner product."
+        },
+        {
+        "name": "Forward Slash",
+        "syntax": "/",
+        "example": "a / b",
+        "description": "The forward slash symbol is used to represent division or a fraction."
+        },
+        {
+        "name": "Backslash",
+        "syntax": "[backslash]backslash",
+        "example": "x [backslash]backslash y",
+        "description": "The backslash symbol is used as an escape character or to indicate set complement in certain contexts."
+        }
 ]
