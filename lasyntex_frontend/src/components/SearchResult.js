@@ -6,7 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const replace = (oldstr) => {
   const newstr = oldstr.replaceAll("[backslash]", "\\");
-  console.log(newstr)
+  // console.log(newstr)
   return newstr;
 };
 

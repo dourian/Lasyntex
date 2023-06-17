@@ -8,6 +8,7 @@ import { initializeApp } from "firebase/app";
 import Bottomleft from "../components/Bottomleft";
 import { getRemoteConfig } from "firebase/remote-config";
 import { getValue } from "firebase/remote-config";
+import Global from "../classes/Global"
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -38,23 +39,13 @@ function Home() {
   const { search } = window.location;
   const query = new URLSearchParams(search).get("s");
   const [searchQuery, setSearchQuery] = useState(query || "");
-  const [postList, setPosts] = useState([]);
-  const filteredPosts = filterPosts(postList, searchQuery);
+  // const [postList, setPosts] = useState([]);
+  
 
 
-  // fetch("http://localhost:3001/allcommands")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     // sorts array lexigraphically first
-  //     var dummy = [];
-  //     dummy = data;
-  //     let sorteddummy = dummy.sort((r1, r2) => r1.name.localeCompare(r2.name))
-  //     setPosts(sorteddummy);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err.message);
-  //   });
+  
 
+    const filteredPosts = filterPosts(Global.commandsList, searchQuery);
 
   return (
     <div className="page_wrapper">

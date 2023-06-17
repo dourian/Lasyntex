@@ -10,5 +10,11 @@
         "syntax": "[backslash]diamond",
         "example": "[backslash]diamond",
         "description": "Creates a diamond"
+    },
+    {
+        "name": "Summation/Sigma",
+        "syntax": "[backslash]sum_{i}^{n}i",
+        "example": "[backslash]sum_{i=0}^{6}i",
+        "description": "Summation with sigma notation"
     }
 ]
