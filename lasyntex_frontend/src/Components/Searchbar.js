@@ -1,4 +1,4 @@
-import "./Searchbar.css";
+import "../css/Searchbar.css";
 
 // SearchBar consumes a query and returns a search bar
 const SearchBar = ({ searchQuery, setSearchQuery }) => (

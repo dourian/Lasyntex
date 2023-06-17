@@ -1,4 +1,4 @@
-import "./Searchbar.css";
+import "../css/Searchbar.css";
 import "katex/dist/katex.min.css";
 import Latex from "react-latex-next";
 import Collapsible from "react-collapsible";
@@ -6,17 +6,13 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const replace = (oldstr) => {
   const newstr = oldstr.replaceAll("[backslash]", "\\");
+  console.log(newstr)
   return newstr;
 };
 
-
 function SearchResult({ name, syntax, example, description, index}) {
-  // const rotateIcon = (index) => {
-  //   document.getElementById(`arrow${index}`).style.color = "white"
-  // }
   return (
     <Collapsible
-      // onOpen={console.log("clicked")}
       trigger={
         <div className="search_result">
           <div className="name_box">
@@ -42,8 +38,7 @@ function SearchResult({ name, syntax, example, description, index}) {
           <p className="example_latex">
             Output:
             <br />
-            <Latex>{replace(example)}</Latex>
-            {/* <Latex>{example}</Latex> */}
+            <Latex>{`$$${replace(example)}$$`}</Latex>
           </p>
         </div>
         <div className="description">

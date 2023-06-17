@@ -9,22 +9,17 @@ import Bottomleft from "../components/Bottomleft";
 import { getRemoteConfig } from "firebase/remote-config";
 import { getValue } from "firebase/remote-config";
 
-
-
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyDJSMjdFPMJkp-cJvYZeodIOE53C_HzwD0",
-  authDomain: "lasyntexhost.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
   projectId: "lasyntexhost",
-  storageBucket: "lasyntexhost.appspot.com",
-  messagingSenderId: "525653224431",
-  appId: "1:525653224431:web:9d4ebdbfc637cdbec7641a",
-  measurementId: "G-F0PH4V3YLD"
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 const remoteConfig = getRemoteConfig(app);
 const val = getValue(remoteConfig, "left");
 
@@ -46,20 +41,20 @@ function Home() {
   const [postList, setPosts] = useState([]);
   const filteredPosts = filterPosts(postList, searchQuery);
 
-  useEffect(() => {
-    fetch("https://lasyntex.herokuapp.com/allcommands")
-      .then((response) => response.json())
-      .then((data) => {
-        // sorts array lexigraphically first
-        var dummy = [];
-        dummy = data;
-        let sorteddummy = dummy.sort((r1, r2) => r1.name.localeCompare(r2.name))
-        setPosts(sorteddummy);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  });
+
+  // fetch("http://localhost:3001/allcommands")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     // sorts array lexigraphically first
+  //     var dummy = [];
+  //     dummy = data;
+  //     let sorteddummy = dummy.sort((r1, r2) => r1.name.localeCompare(r2.name))
+  //     setPosts(sorteddummy);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err.message);
+  //   });
+
 
   return (
     <div className="page_wrapper">
