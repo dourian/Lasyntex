@@ -1,11 +1,5 @@
 [
     {
-        "name": "Summation/Sigma",
-        "syntax": "[backslash]sum_{i}^{n}i",
-        "example": "[backslash]sum_{i=0}^{6}i",
-        "description": "Summation with sigma notation"
-    },
-    {
         "name": "Left Arrow",
         "syntax": "[backslash]leftarrow",
         "example": "x [backslash]leftarrow y",
@@ -750,45 +744,591 @@
         "description": "The join symbol represents the join operation in relational algebra, combining rows from two tables based on a common attribute."
       },
       {
-        "name": "Curly Brace",
-        "syntax": "{[backslash]}{[backslash]}",
-        "example": "{A, B, C}",
-        "description": "The curly brace symbols are used to enclose sets or indicate grouping in mathematical expressions."
-        },
-        {
-        "name": "Right Curly Brace",
-        "syntax": "{[backslash]}{[backslash]}",
-        "example": "{x [backslash]}{[backslash]}{[backslash]}{[backslash]} y}",
-        "description": "The right curly brace symbol is used to close a set or indicate the end of a grouped expression."
-        },
-        {
-        "name": "Floor",
-        "syntax": "[backslash]lfloor [backslash]rfloor",
-        "example": "[backslash]lfloor x [backslash]rfloor",
-        "description": "The floor symbols represent the greatest integer less than or equal to a given number."
-        },
-        {
-        "name": "Ceiling",
-        "syntax": "[backslash]lceil [backslash]rceil",
-        "example": "[backslash]lceil x [backslash]rceil",
-        "description": "The ceiling symbols represent the smallest integer greater than or equal to a given number."
-        },
-        {
-        "name": "Angle Brackets",
-        "syntax": "[backslash]langle [backslash]rangle",
-        "example": "[backslash]langle a, b [backslash]rangle",
-        "description": "The angle brackets symbols are used to enclose vectors or denote an inner product."
-        },
-        {
-        "name": "Forward Slash",
-        "syntax": "/",
-        "example": "a / b",
-        "description": "The forward slash symbol is used to represent division or a fraction."
-        },
-        {
-        "name": "Backslash",
-        "syntax": "[backslash]backslash",
-        "example": "x [backslash]backslash y",
-        "description": "The backslash symbol is used as an escape character or to indicate set complement in certain contexts."
-        }
+    "name": "Curly Brace",
+    "syntax": "{[backslash]}{[backslash]}",
+    "example": "{A, B, C}",
+    "description": "The curly brace symbols are used to enclose sets or indicate grouping in mathematical expressions."
+    },
+    {
+    "name": "Right Curly Brace",
+    "syntax": "{[backslash]}{[backslash]}",
+    "example": "{x [backslash]}{[backslash]}{[backslash]}{[backslash]} y}",
+    "description": "The right curly brace symbol is used to close a set or indicate the end of a grouped expression."
+    },
+    {
+    "name": "Floor",
+    "syntax": "[backslash]lfloor [backslash]rfloor",
+    "example": "[backslash]lfloor x [backslash]rfloor",
+    "description": "The floor symbols represent the greatest integer less than or equal to a given number."
+    },
+    {
+    "name": "Ceiling",
+    "syntax": "[backslash]lceil [backslash]rceil",
+    "example": "[backslash]lceil x [backslash]rceil",
+    "description": "The ceiling symbols represent the smallest integer greater than or equal to a given number."
+    },
+    {
+    "name": "Angle Brackets",
+    "syntax": "[backslash]langle [backslash]rangle",
+    "example": "[backslash]langle a, b [backslash]rangle",
+    "description": "The angle brackets symbols are used to enclose vectors or denote an inner product."
+    },
+    {
+    "name": "Forward Slash",
+    "syntax": "/",
+    "example": "a / b",
+    "description": "The forward slash symbol is used to represent division or a fraction."
+    },
+    {
+    "name": "Backslash",
+    "syntax": "[backslash]backslash",
+    "example": "x [backslash]backslash y",
+    "description": "The backslash symbol is used as an escape character or to indicate set complement in certain contexts."
+    },
+    {
+    "name": "Plus-Minus",
+    "syntax": "[backslash]pm",
+    "example": "a [backslash]pm b",
+    "description": "The plus-minus symbol represents the mathematical operation of addition or subtraction, indicating that both possibilities are valid."
+    },
+    {
+    "name": "Intersection",
+    "syntax": "[backslash]cap",
+    "example": "A [backslash]cap B",
+    "description": "The intersection symbol represents the set operation of taking elements that are common to two sets."
+    },
+    {
+    "name": "Minus-Plus",
+    "syntax": "[backslash]mp",
+    "example": "a [backslash]mp b",
+    "description": "The minus-plus symbol represents the mathematical operation of subtraction followed by addition, indicating both possibilities."
+    },
+    {
+    "name": "Union",
+    "syntax": "[backslash]cup",
+    "example": "A [backslash]cup B",
+    "description": "The union symbol represents the set operation of combining elements from two sets, including duplicates."
+    },
+    {
+    "name": "Set Minus",
+    "syntax": "[backslash]setminus",
+    "example": "A [backslash]setminus B",
+    "description": "The set minus symbol represents the set operation of subtracting elements of one set from another."
+    },
+    {
+    "name": "Upward Pointing Triangle",
+    "syntax": "[backslash]triangleleft",
+    "example": "[backslash]triangleleft ABC",
+    "description": "The upward pointing triangle symbol represents a relation or ordering in which the left-hand side precedes the right-hand side."
+    },
+    {
+    "name": "Star",
+    "syntax": "?[backslash]star",
+    "example": "a ?[backslash]star b",
+    "description": "The star symbol represents various operations or meanings depending on the context, such as multiplication or exceptional cases."
+    },
+    {
+    "name": "Rightward Pointing Triangle",
+    "syntax": ".[backslash]triangleright",
+    "example": "ABC .[backslash]triangleright XYZ",
+    "description": "The rightward pointing triangle symbol represents a relation or ordering in which the right-hand side follows the left-hand side."
+    },
+    {
+    "name": "Diamond",
+    "syntax": "[backslash]diamond",
+    "example": "x [backslash]diamond y",
+    "description": "The diamond symbol represents various operations or meanings depending on the context, such as logical XOR or difference."
+    },
+    {
+    "name": "Wreath Product",
+    "syntax": "o[backslash]wr",
+    "example": "G o[backslash]wr H",
+    "description": "The wreath product symbol represents a specific kind of group or module extension."
+    },
+    {
+    "name": "Small Circle",
+    "syntax": "[backslash]circ",
+    "example": "x [backslash]circ y",
+    "description": "The small circle symbol represents various operations or meanings depending on the context, such as function composition or element-wise operations."
+    },
+    {
+    "name": "Large Circle",
+    "syntax": "[backslash]bigcirc",
+    "example": "[backslash]bigcirc A",
+    "description": "The large circle symbol is used to represent a binary operation or logical connective, such as logical OR."
+    },
+    {
+    "name": "Bullet",
+    "syntax": "[backslash]bullet",
+    "example": "x [backslash]bullet y",
+    "description": "The bullet symbol is used to represent a point or item in a list or as a mathematical operator."
+    },
+    {
+    "name": "Big Triangle Up",
+    "syntax": "4[backslash]bigtriangleup",
+    "example": "4[backslash]bigtriangleup ABC",
+    "description": "The big triangle up symbol represents an order or relation in which the elements above are greater or higher than the elements below."
+    },
+    {
+    "name": "Division",
+    "syntax": "[backslash]div",
+    "example": "a [backslash]div b",
+    "description": "The division symbol represents the mathematical operation of division, indicating the quotient of two numbers."
+    },
+    {
+    "name": "Big Triangle Down",
+    "syntax": "5[backslash]bigtriangledown",
+    "example": "5[backslash]bigtriangledown XYZ",
+    "description": "The big triangle down symbol represents an order or relation in which the elements below are smaller or lower than the elements above."
+    },
+    {
+    "name": "Left-Handed Semicircle",
+    "syntax": "[backslash]lhd",
+    "example": "a [backslash]lhd b",
+    "description": "The left-handed semicircle symbol represents a relation or mapping in which the left-hand side maps to or is related to the right-hand side."
+    },
+    {
+    "name": "Right-Handed Semicircle",
+    "syntax": "[backslash]rhd",
+    "example": "a [backslash]rhd b",
+    "description": "The right-handed semicircle symbol represents a relation or mapping in which the right-hand side maps to or is related to the left-hand side."
+    },
+    {
+    "name": "Logical OR",
+    "syntax": "[backslash]vee",
+    "example": "p [backslash]vee q",
+    "description": "The logical OR symbol represents the logical operation of disjunction, indicating that at least one of the two propositions is true."
+    },
+    {
+    "name": "Circle Dot",
+    "syntax": "[backslash]odot",
+    "example": "x [backslash]odot y",
+    "description": "The circle dot symbol represents various operations or meanings depending on the context, such as logical AND or composition of mappings."
+    },
+    {
+    "name": "Logical AND",
+    "syntax": "[backslash]wedge",
+    "example": "p [backslash]wedge q",
+    "description": "The logical AND symbol represents the logical operation of conjunction, indicating that both propositions are true."
+    },
+    {
+    "name": "Dagger",
+    "syntax": "[backslash]dagger",
+    "example": "a [backslash]dagger b",
+    "description": "The dagger symbol represents various meanings depending on the context, such as a footnote marker or a symbol for a specific operation."
+    },
+    {
+    "name": "Direct Sum",
+    "syntax": "[backslash]oplus",
+    "example": "A [backslash]oplus B",
+    "description": "The direct sum symbol represents the direct sum of two mathematical structures, such as vector spaces or modules."
+    },
+    {
+    "name": "Double Dagger",
+    "syntax": "[backslash]ddagger",
+    "example": "x [backslash]ddagger y",
+    "description": "The double dagger symbol represents various meanings depending on the context, such as a footnote marker or a symbol for a specific operation."
+    },
+    {
+    "name": "Circle Plus",
+    "syntax": "q[backslash]amalg",
+    "example": "p q[backslash]amalg r",
+    "description": "The circle plus symbol represents various operations or meanings depending on the context, such as exclusive OR or disjoint union."
+    },
+    {
+    "name": "Tensor Product",
+    "syntax": "[backslash]otimes",
+    "example": "A [backslash]otimes B",
+    "description": "The tensor product symbol represents the tensor product of two vector spaces or modules."
+    },
+    {
+    "name": "Unlabeled Left-Handed Semicircle",
+    "syntax": "[backslash]unlhd",
+    "example": "a [backslash]unlhd b",
+    "description": "The unlabeled left-handed semicircle symbol represents a relation or mapping in which the left-hand side maps to or is related to the right-hand side."
+    },
+    {
+    "name": "Circle Slash",
+    "syntax": " [backslash]oslash",
+    "example": "X [backslash]oslash Y",
+    "description": "The circle slash symbol represents various operations or meanings depending on the context, such as negation or set difference."
+    },
+    {
+    "name": "Unlabeled Right-Handed Semicircle",
+    "syntax": "[backslash]unrhd",
+    "example": "a [backslash]unrhd b",
+    "description": "The unlabeled right-handed semicircle symbol represents a relation or mapping in which the right-hand side maps to or is related to the left-hand side."
+    },
+    {
+    "name": "Summation",
+    "syntax": "[backslash]sum",
+    "example": "[backslash]sum_{i=1}^{n} x_i",
+    "description": "The summation symbol represents the sum of a sequence of terms, often used in mathematical and statistical calculations."
+    },
+    {
+    "name": "Intersection",
+    "syntax": "[backslash]bigcap",
+    "example": "A [backslash]bigcap B",
+    "description": "The intersection symbol represents the set of elements that are common to two or more sets."
+    },
+    {
+    "name": "Product",
+    "syntax": "[backslash]prod",
+    "example": "[backslash]prod_{i=1}^{n} x_i",
+    "description": "The product symbol represents the multiplication of a sequence of factors, often used in mathematical and statistical calculations."
+    },
+    {
+    "name": "Union",
+    "syntax": "[backslash]bigcup",
+    "example": "A [backslash]bigcup B",
+    "description": "The union symbol represents the set of elements that belong to at least one of two or more sets."
+    },
+    {
+    "name": "Disjoint Union",
+    "syntax": "[backslash]coprod",
+    "example": "A [backslash]coprod B",
+    "description": "The disjoint union symbol represents the union of sets that are disjoint or mutually exclusive."
+    },
+    {
+    "name": "Squared Cup",
+    "syntax": "[backslash]bigsqcup",
+    "example": "A [backslash]bigsqcup B",
+    "description": "The squared cup symbol represents the union of sets with squares, often used in measure theory and set theory."
+    },
+    {
+    "name": "Integral",
+    "syntax": "[backslash]int",
+    "example": "[backslash]int_{a}^{b} f(x) dx",
+    "description": "The integral symbol represents the mathematical concept of integration, used to calculate areas, volumes, and other quantities."
+    },
+    {
+    "name": "Big Vee",
+    "syntax": "[backslash]bigvee",
+    "example": "p [backslash]bigvee q",
+    "description": "The big vee symbol represents the logical OR operation, indicating that at least one of the two propositions is true."
+    },
+    {
+    "name": "Contour Integral",
+    "syntax": "[backslash]oint",
+    "example": "[backslash]oint_{C} f(z) dz",
+    "description": "The contour integral symbol represents the line integral taken along a closed curve or contour in the complex plane."
+    },
+    {
+    "name": "Big Wedge",
+    "syntax": "[backslash]bigwedge",
+    "example": "p [backslash]bigwedge q",
+    "description": "The big wedge symbol represents the logical AND operation, indicating that both propositions are true."
+    },
+    {
+    "name": "Big Circle Dot",
+    "syntax": "[backslash]bigodot",
+    "example": "A [backslash]bigodot B",
+    "description": "The big circle dot symbol represents various operations or meanings depending on the context, such as direct product or logical XOR."
+    },
+    {
+    "name": "Big Tensor Product",
+    "syntax": "[backslash]bigotimes",
+    "example": "A [backslash]bigotimes B",
+    "description": "The big tensor product symbol represents the tensor product of two or more vector spaces or modules."
+    },
+    {
+    "name": "Big Direct Sum",
+    "syntax": "[backslash]bigoplus",
+    "example": "A [backslash]bigoplus B",
+    "description": "The big direct sum symbol represents the direct sum of two or more vector spaces or modules."
+    },
+    {
+    "name": "Big Disjoint Union",
+    "syntax": "[backslash]biguplus",
+    "example": "A [backslash]biguplus B",
+    "description": "The big disjoint union symbol represents the union of sets with a plus sign, often used in algebraic topology and set theory."
+    },
+    {
+    "name": "Latin Small Ligature OE",
+    "syntax": "[backslash]oe",
+    "example": "[backslash]text{lorem ipsum dolor sit [backslash]oe ligature}",
+    "description": "The Latin small ligature OE represents the combination of the letters 'o' and 'e' into a single character."
+    },
+    {
+    "name": "Latin Small Letter A with Ring Above",
+    "syntax": "[backslash]aa",
+    "example": "[backslash]text{[backslash]r{a}}",
+    "description": "The Latin small letter A with a ring above is used in various languages, such as Swedish and Danish, to represent a specific sound."
+    },
+    {
+    "name": "Latin Small Letter L with Stroke",
+    "syntax": "[backslash]l",
+    "example": "[backslash]text{[backslash]l}",
+    "description": "The Latin small letter L with a stroke is used in phonetic transcription and some languages, such as Polish, to represent a specific sound."
+    },
+    {
+    "name": "Latin Capital Ligature OE",
+    "syntax": "[backslash]OE",
+    "example": "[backslash]text{LOREM IPSUM DOLOR SIT [backslash]OE LIGATURE}",
+    "description": "The Latin capital ligature OE represents the combination of the letters 'O' and 'E' into a single character."
+    },
+    {
+    "name": "Latin Capital Letter A with Ring Above",
+    "syntax": "[backslash]AA",
+    "example": "[backslash]text{[backslash]r{A}}",
+    "description": "The Latin capital letter A with a ring above is used in various languages, such as Swedish and Danish, to represent a specific sound."
+    },
+    {
+    "name": "Latin Capital Letter L with Stroke",
+    "syntax": "[backslash]L",
+    "example": "[backslash]text{[backslash]L}",
+    "description": "The Latin capital letter L with a stroke is used in phonetic transcription and some languages, such as Polish, to represent a specific sound."
+    },
+    {
+    "name": "Latin Small Ligature AE",
+    "syntax": "[backslash]ae",
+    "example": "[backslash]text{lorem ipsum dolor sit [backslash]ae ligature}",
+    "description": "The Latin small ligature AE represents the combination of the letters 'a' and 'e' into a single character."
+    },
+    {
+    "name": "Latin Small Letter O with Stroke",
+    "syntax": "[backslash]o",
+    "example": "[backslash]text{[backslash]o}",
+    "description": "The Latin small letter O with a stroke is used in phonetic transcription and some languages, such as Danish and Norwegian, to represent a specific sound."
+    },
+    {
+    "name": "Latin Small Letter Sharp S",
+    "syntax": "[backslash]ss",
+    "example": "[backslash]text{lorem [backslash]ss ipsum}",
+    "description": "The Latin small letter sharp s, also known as the ess-zed, is used in the German language as a lowercase letter representing the voiceless alveolar fricative sound."
+    },
+    {
+    "name": "Latin Capital Ligature AE",
+    "syntax": "[backslash]AE",
+    "example": "[backslash]text{LOREM IPSUM DOLOR SIT [backslash]AE LIGATURE}",
+    "description": "The Latin capital ligature AE represents the combination of the letters 'A' and 'E' into a single character."
+    },
+    {
+    "name": "Latin Capital Letter O with Stroke",
+    "syntax": "[backslash]O",
+    "example": "[backslash]text{[backslash]O}",
+    "description": "The Latin capital letter O with a stroke is used in phonetic transcription and some languages, such as Danish and Norwegian, to represent a specific sound."
+    },
+    {
+    "name": "alpha",
+    "syntax": "[backslash]alpha",
+    "example": "[backslash]alpha",
+    "description": "Lowercase alpha symbol"
+    },
+    {
+    "name": "nu",
+    "syntax": "[backslash]nu",
+    "example": "[backslash]nu",
+    "description": "Lowercase nu symbol"
+    },
+    {
+    "name": "beta",
+    "syntax": "[backslash]beta",
+    "example": "[backslash]beta",
+    "description": "Lowercase beta symbol"
+    },
+    {
+    "name": "xi",
+    "syntax": "[backslash]xi",
+    "example": "[backslash]xi",
+    "description": "Lowercase xi symbol"
+    },
+    {
+    "name": "gamma",
+    "syntax": "[backslash]gamma",
+    "example": "[backslash]gamma",
+    "description": "Lowercase gamma symbol"
+    },
+    {
+    "name": "delta",
+    "syntax": "[backslash]delta",
+    "example": "[backslash]delta",
+    "description": "Lowercase delta symbol"
+    },
+    {
+    "name": "pi",
+    "syntax": "[backslash]pi",
+    "example": "[backslash]pi",
+    "description": "Lowercase pi symbol"
+    },
+    {
+    "name": "epsilon",
+    "syntax": "[backslash]epsilon",
+    "example": "[backslash]epsilon",
+    "description": "Lowercase epsilon symbol"
+    },
+    {
+    "name": "rho",
+    "syntax": "[backslash]rho",
+    "example": "[backslash]rho",
+    "description": "Lowercase rho symbol"
+    },
+    {
+    "name": "zeta",
+    "syntax": "[backslash]zeta",
+    "example": "[backslash]zeta",
+    "description": "Lowercase zeta symbol"
+    },
+    {
+    "name": "sigma",
+    "syntax": "[backslash]sigma",
+    "example": "[backslash]sigma",
+    "description": "Lowercase sigma symbol"
+    },
+    {
+    "name": "eta",
+    "syntax": "[backslash]eta",
+    "example": "[backslash]eta",
+    "description": "Lowercase eta symbol"
+    },
+    {
+    "name": "tau",
+    "syntax": "[backslash]tau",
+    "example": "[backslash]tau",
+    "description": "Lowercase tau symbol"
+    },
+    {
+    "name": "theta",
+    "syntax": "[backslash]theta",
+    "example": "[backslash]theta",
+    "description": "Lowercase theta symbol"
+    },
+    {
+    "name": "upsilon",
+    "syntax": "[backslash]upsilon",
+    "example": "[backslash]upsilon",
+    "description": "Lowercase upsilon symbol"
+    },
+    {
+    "name": "iota",
+    "syntax": "[backslash]iota",
+    "example": "[backslash]iota",
+    "description": "Lowercase iota symbol"
+    },
+    {
+    "name": "phi",
+    "syntax": "[backslash]phi",
+    "example": "[backslash]phi",
+    "description": "Lowercase phi symbol"
+    },
+    {
+    "name": "kappa",
+    "syntax": "[backslash]kappa",
+    "example": "[backslash]kappa",
+    "description": "Lowercase kappa symbol"
+    },
+    {
+    "name": "chi",
+    "syntax": "[backslash]chi",
+    "example": "[backslash]chi",
+    "description": "Lowercase chi symbol"
+    },
+    {
+    "name": "lambda",
+    "syntax": "[backslash]lambda",
+    "example": "[backslash]lambda",
+    "description": "Lowercase lambda symbol"
+    },
+    {
+    "name": "psi",
+    "syntax": "[backslash]psi",
+    "example": "[backslash]psi",
+    "description": "Lowercase psi symbol"
+    },
+    {
+    "name": "mu",
+    "syntax": "[backslash]mu",
+    "example": "[backslash]mu",
+    "description": "Lowercase mu symbol"
+    },
+    {
+    "name": "omega",
+    "syntax": "[backslash]omega",
+    "example": "[backslash]omega",
+    "description": "Lowercase omega symbol"
+    },
+    {
+    "name": "varepsilon",
+    "syntax": "[backslash]varepsilon",
+    "example": "[backslash]varepsilon",
+    "description": "Lowercase varepsilon symbol"
+    },
+    {
+    "name": "varsigma",
+    "syntax": "[backslash]varsigma",
+    "example": "[backslash]varsigma",
+    "description": "Lowercase varsigma symbol"
+    },
+    {
+    "name": "vartheta",
+    "syntax": "[backslash]vartheta",
+    "example": "[backslash]vartheta",
+    "description": "Lowercase vartheta symbol"
+    },
+    {
+    "name": "varphi",
+    "syntax": "[backslash]varphi",
+    "example": "[backslash]varphi",
+    "description": "Lowercase varphi symbol"
+    },
+    {
+    "name": "varrho",
+    "syntax": "[backslash]varrho",
+    "example": "[backslash]varrho",
+    "description": "Lowercase varrho symbol"
+    },
+    {
+    "name": "Delta",
+    "syntax": "[backslash]Delta",
+    "example": "[backslash]Delta",
+    "description": "Uppercase Delta symbol"
+    },
+    {
+    "name": "Upsilon",
+    "syntax": "[backslash]Upsilon",
+    "example": "[backslash]Upsilon",
+    "description": "Uppercase Upsilon symbol"
+    },
+    {
+    "name": "Theta",
+    "syntax": "[backslash]Theta",
+    "example": "[backslash]Theta",
+    "description": "Uppercase Theta symbol"
+    },
+    {
+    "name": "Phi",
+    "syntax": "[backslash]Phi",
+    "example": "[backslash]Phi",
+    "description": "Uppercase Phi symbol"
+    },
+    {
+    "name": "Lambda",
+    "syntax": "[backslash]Lambda",
+    "example": "[backslash]Lambda",
+    "description": "Uppercase Lambda symbol"
+    },
+    {
+    "name": "Psi",
+    "syntax": "[backslash]Psi",
+    "example": "[backslash]Psi",
+    "description": "Uppercase Psi symbol"
+    },
+    {
+    "name": "Xi",
+    "syntax": "[backslash]Xi",
+    "example": "[backslash]Xi",
+    "description": "Uppercase Xi symbol"
+    },
+    {
+    "name": "Omega",
+    "syntax": "[backslash]Omega",
+    "example": "[backslash]Omega",
+    "description": "Uppercase Omega symbol"
+    },
+    {
+    "name": "Pi",
+    "syntax": "[backslash]Pi",
+    "example": "[backslash]Pi",
+    "description": "Uppercase Pi symbol"
+    }
 ]
