@@ -1,20 +1,188 @@
 [
     {
-        "name": "Sigma",
-        "syntax": "[backslash]sigma",
-        "example": "[backslash]sigma",
-        "description": "Creates a sigma variable"
-    },
-    {
-        "name": "diamond",
-        "syntax": "[backslash]diamond",
-        "example": "[backslash]diamond",
-        "description": "Creates a diamond"
-    },
-    {
         "name": "Summation/Sigma",
         "syntax": "[backslash]sum_{i}^{n}i",
         "example": "[backslash]sum_{i=0}^{6}i",
         "description": "Summation with sigma notation"
-    }
+    },
+    {
+        "name": "Left Arrow",
+        "syntax": "[backslash]leftarrow",
+        "example": "x [backslash]leftarrow y",
+        "description": "The left arrow symbol represents a leftward direction or implication."
+      },
+      {
+        "name": "Long Left Arrow",
+        "syntax": "[backslash]longleftarrow",
+        "example": "x [backslash]longleftarrow y",
+        "description": "The long left arrow symbol represents a longer leftward direction or implication."
+      },
+      {
+        "name": "Double Left Arrow",
+        "syntax": "[backslash]Leftarrow",
+        "example": "x [backslash]Leftarrow y",
+        "description": "The double left arrow symbol represents a logical implication or equivalence in a leftward direction."
+      },
+      {
+        "name": "Long Double Left Arrow",
+        "syntax": "[backslash]Longleftarrow",
+        "example": "x [backslash]Longleftarrow y",
+        "description": "The long double left arrow symbol represents a longer logical implication or equivalence in a leftward direction."
+      },
+      {
+        "name": "Right Arrow",
+        "syntax": "[backslash]rightarrow",
+        "example": "x [backslash]rightarrow y",
+        "description": "The right arrow symbol represents a rightward direction or implication."
+      },
+      {
+        "name": "Long Right Arrow",
+        "syntax": "[backslash]longrightarrow",
+        "example": "x [backslash]longrightarrow y",
+        "description": "The long right arrow symbol represents a longer rightward direction or implication."
+      },
+      {
+        "name": "Double Right Arrow",
+        "syntax": "[backslash]Rightarrow",
+        "example": "x [backslash]Rightarrow y",
+        "description": "The double right arrow symbol represents a logical implication or equivalence in a rightward direction."
+      },
+      {
+        "name": "Long Double Right Arrow",
+        "syntax": "[backslash]Longrightarrow",
+        "example": "x [backslash]Longrightarrow y",
+        "description": "The long double right arrow symbol represents a longer logical implication or equivalence in a rightward direction."
+      },
+      {
+        "name": "Double Left-Right Arrow",
+        "syntax": "[backslash]leftrightarrow",
+        "example": "x [backslash]leftrightarrow y",
+        "description": "The double left-right arrow symbol represents a bidirectional flow or equivalence."
+      },
+      {
+        "name": "Long Double Left-Right Arrow",
+        "syntax": "[backslash]longleftrightarrow",
+        "example": "x [backslash]longleftrightarrow y",
+        "description": "The long double left-right arrow symbol represents a longer bidirectional flow or equivalence."
+      },
+      {
+        "name": "Double Double Left-Right Arrow",
+        "syntax": "[backslash]Leftrightarrow",
+        "example": "x [backslash]Leftrightarrow y",
+        "description": "The double double left-right arrow symbol represents a logical equivalence or bidirectional implication."
+      },
+      {
+        "name": "Long Double Double Left-Right Arrow",
+        "syntax": "[backslash]Longleftrightarrow",
+        "example": "x [backslash]Longleftrightarrow y",
+        "description": "The long double double left-right arrow symbol represents a longer logical equivalence or bidirectional implication."
+      },
+      {
+        "name": "Maps To",
+        "syntax": "[backslash]mapsto",
+        "example": "x [backslash]mapsto y",
+        "description": "The maps to symbol represents a mapping from one set to another."
+      },
+      {
+        "name": "Hook Left Arrow",
+        "syntax": "[backslash]hookleftarrow",
+        "example": "x [backslash]hookleftarrow y",
+        "description": "The hook left arrow symbol represents a hooked leftward direction or implication."
+      },
+      {
+        "name": "Hook Right Arrow",
+        "syntax": "[backslash]hookrightarrow",
+        "example": "x [backslash]hookrightarrow y",
+        "description": "The hook right arrow symbol represents a hooked rightward direction or implication."
+      },
+      {
+        "name": "Left Harpoon Up",
+        "syntax": "[backslash]leftharpoonup",
+        "example": "x [backslash]leftharpoonup y",
+        "description": "The left harpoon up symbol represents a leftward pointing harpoon or implication."
+      },
+      {
+        "name": "Right Harpoon Up",
+        "syntax": "[backslash]rightharpoonup",
+        "example": "x [backslash]rightharpoonup y",
+        "description": "The right harpoon up symbol represents a rightward pointing harpoon or implication."
+      },
+      {
+        "name": "Left Harpoon Down",
+        "syntax": "[backslash]leftharpoondown",
+        "example": "x [backslash]leftharpoondown y",
+        "description": "The left harpoon down symbol represents a leftward pointing harpoon or negation."
+      },
+      {
+        "name": "Right Harpoon Down",
+        "syntax": "[backslash]rightharpoondown",
+        "example": "x [backslash]rightharpoondown y",
+        "description": "The right harpoon down symbol represents a rightward pointing harpoon or negation."
+      },
+      {
+        "name": "Right and Left Harpoons",
+        "syntax": "[backslash]rightleftharpoons",
+        "example": "x [backslash]rightleftharpoons y",
+        "description": "The right and left harpoons symbol represents a reversible reaction or equivalence."
+      },
+      {
+        "name": "Leadsto",
+        "syntax": "[backslash]leadsto",
+        "example": "x [backslash]leadsto y",
+        "description": "The leadsto symbol represents a step-by-step transformation or process."
+      },
+      {
+        "name": "Up Arrow",
+        "syntax": "[backslash]uparrow",
+        "example": "x [backslash]uparrow y",
+        "description": "The up arrow symbol represents an upward direction or implication."
+      },
+      {
+        "name": "Up-Down Arrow",
+        "syntax": "[backslash]Updownarrow",
+        "example": "x [backslash]Updownarrow y",
+        "description": "The up-down arrow symbol represents a bidirectional flow or equivalence in an upward and downward direction."
+      },
+      {
+        "name": "Upwards Double Arrow",
+        "syntax": "[backslash]Uparrow",
+        "example": "x [backslash]Uparrow y",
+        "description": "The upwards double arrow symbol represents an upward logical implication or equivalence."
+      },
+      {
+        "name": "Nearrow",
+        "syntax": "[backslash]nearrow",
+        "example": "x [backslash]nearrow y",
+        "description": "The nearrow symbol represents a northeast arrow direction."
+      },
+      {
+        "name": "Down Arrow",
+        "syntax": "[backslash]downarrow",
+        "example": "x [backslash]downarrow y",
+        "description": "The down arrow symbol represents a downward direction or implication."
+      },
+      {
+        "name": "Searrow",
+        "syntax": "[backslash]searrow",
+        "example": "x [backslash]searrow y",
+        "description": "The searrow symbol represents a southeast arrow direction."
+      },
+      {
+        "name": "Downwards Double Arrow",
+        "syntax": "[backslash]Downarrow",
+        "example": "x [backslash]Downarrow y",
+        "description": "The downwards double arrow symbol represents a downward logical implication or equivalence."
+      },
+      {
+        "name": "Swarrow",
+        "syntax": "[backslash]swarrow",
+        "example": "x [backslash]swarrow y",
+        "description": "The swarrow symbol represents a southwest arrow direction."
+      },
+      {
+        "name": "Up-Down Arrow with Horizontal Bar",
+        "syntax": "[backslash]Updownarrow",
+        "example": "x [backslash]Updownarrow y",
+        "description": "The up-down arrow with horizontal bar symbol represents a bidirectional flow or equivalence in both upward and downward directions."
+      }
 ]
