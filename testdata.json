@@ -1330,5 +1330,281 @@
     "syntax": "[backslash]Pi",
     "example": "[backslash]Pi",
     "description": "Uppercase Pi symbol"
-    }
+    },
+    {
+    "name": "hat",
+    "syntax": "[backslash]hat{a}",
+    "example": "[backslash]hat{a}",
+    "description": "Hat accent on 'a'"
+    },
+    {
+    "name": "dot",
+    "syntax": "[backslash]dot{a}",
+    "example": "[backslash]dot{a}",
+    "description": "Dot accent on 'a'"
+    },
+    {
+    "name": "check",
+    "syntax": "[backslash]check{a}",
+    "example": "[backslash]check{a}",
+    "description": "Check accent on 'a'"
+    },
+    {
+    "name": "ddot",
+    "syntax": "[backslash]ddot{a}",
+    "example": "[backslash]ddot{a}",
+    "description": "Double dot accent on 'a'"
+    },
+    {
+    "name": "tilde",
+    "syntax": "[backslash]tilde{a}",
+    "example": "[backslash]tilde{a}",
+    "description": "Tilde accent on 'a'"
+    },
+    {
+    "name": "breve",
+    "syntax": "[backslash]breve{a}",
+    "example": "[backslash]breve{a}",
+    "description": "Breve accent on 'a'"
+    },
+    {
+    "name": "acute",
+    "syntax": "[backslash]acute{a}",
+    "example": "[backslash]acute{a}",
+    "description": "Acute accent on 'a'"
+    },
+    {
+    "name": "bar",
+    "syntax": "[backslash]bar{a}",
+    "example": "[backslash]bar{a}",
+    "description": "Bar accent on 'a'"
+    },
+    {
+    "name": "grave",
+    "syntax": "[backslash]grave{a}",
+    "example": "[backslash]grave{a}",
+    "description": "Grave accent on 'a'"
+    },
+    {
+    "name": "vec",
+    "syntax": "[backslash]vec{a}",
+    "example": "[backslash]vec{a}",
+    "description": "Vector arrow on 'a'"
+    },
+    {
+    "name": "Roman",
+    "syntax": "[backslash]rm",
+    "example": "[backslash]rm Text in Roman",
+    "description": "Roman font style"
+    },
+    {
+    "name": "Italic",
+    "syntax": "[backslash]it",
+    "example": "[backslash]it Text in Italic",
+    "description": "Italic font style"
+    },
+    {
+    "name": "Boldface",
+    "syntax": "[backslash]bf",
+    "example": "[backslash]bf Text in Boldface",
+    "description": "Boldface font style"
+    },
+    {
+    "name": "Slanted",
+    "syntax": "[backslash]sl",
+    "example": "[backslash]sl Text in Slanted",
+    "description": "Slanted font style"
+    },
+    {
+    "name": "Sans serif",
+    "syntax": "[backslash]sf",
+    "example": "[backslash]sf Text in Sans serif",
+    "description": "Sans serif font style"
+    },
+    {
+    "name": "Small Caps",
+    "syntax": "[backslash]sc",
+    "example": "[backslash]sc Text in Small Caps",
+    "description": "Small Caps font style"
+    },
+    {
+    "name": "Typewriter",
+    "syntax": "[backslash]tt",
+    "example": "[backslash]tt Text in Typewriter",
+    "description": "Typewriter font style"
+    },
+    {
+    "name": "pt",
+    "syntax": "[backslash]pt",
+    "example": "[backslash]pt",
+    "description": "Point (72.27 pt/in)"
+    },
+    {
+    "name": "pc",
+    "syntax": "[backslash]pc",
+    "example": "[backslash]pc",
+    "description": "Pica (12 pt/pc)"
+    },
+    {
+    "name": "in",
+    "syntax": "[backslash]in",
+    "example": "[backslash]in",
+    "description": "Inch"
+    },
+    {
+    "name": "bp",
+    "syntax": "[backslash]bp",
+    "example": "[backslash]bp",
+    "description": "Big point (72 bp/in)"
+    },
+    {
+    "name": "cm",
+    "syntax": "[backslash]cm",
+    "example": "[backslash]cm",
+    "description": "Centimeter (2.54 cm/in)"
+    },
+    {
+    "name": "mm",
+    "syntax": "[backslash]mm",
+    "example": "[backslash]mm",
+    "description": "Millimeter (10 mm/cm)"
+    },
+    {
+    "name": "dd",
+    "syntax": "[backslash]dd",
+    "example": "[backslash]dd",
+    "description": "Didôôt point (1157 dd = 1238 pt)"
+    },
+    {
+    "name": "cc",
+    "syntax": "[backslash]cc",
+    "example": "[backslash]cc",
+    "description": "Cicero (12 dd/cc)"
+    },
+    {
+    "name": "sp",
+    "syntax": "[backslash]sp",
+    "example": "[backslash]sp",
+    "description": "Scaled point (65536 sp/pt)"
+    },
+    {
+    "name": "em",
+    "syntax": "[backslash]em",
+    "example": "[backslash]em",
+    "description": "Font-dependent; 'quad' width"
+    },
+    {
+    "name": "ex",
+    "syntax": "[backslash]ex",
+    "example": "[backslash]ex",
+    "description": "Font-dependent; 'x'-height"
+    },
+    {
+    "name": "dag",
+    "syntax": "[backslash]dag",
+    "example": "[backslash]dag",
+    "description": "Dagger symbol"
+    },
+    {
+    "name": "S",
+    "syntax": "[backslash]S",
+    "example": "[backslash]S",
+    "description": "Section symbol"
+    },
+    {
+    "name": "copyright",
+    "syntax": "[backslash]copyright",
+    "example": "[backslash]copyright",
+    "description": "Copyright symbol"
+    },
+    {
+    "name": "ddag",
+    "syntax": "[backslash]ddag",
+    "example": "[backslash]ddag",
+    "description": "Double dagger symbol"
+    },
+    {
+    "name": "P",
+    "syntax": "[backslash]P",
+    "example": "[backslash]P",
+    "description": "Paragraph symbol"
+    },
+    {
+    "name": "pounds",
+    "syntax": "[backslash]pounds",
+    "example": "[backslash]pounds",
+    "description": "Pound symbol"
+    },
+    {
+        "name": "shortstack",
+        "syntax": "[backslash]shortstack[pos]{x[backslash][backslash]yy[backslash][backslash]zzz}",
+        "example": "[backslash]shortstack[l]{x[backslash][backslash]yy[backslash][backslash]zzz}",
+        "description": "One-column tabular arrangement of its arguments. Optional pos can be l or r for text position."
+      },
+      {
+        "name": "smile",
+        "syntax": "[backslash]smile",
+        "example": "[backslash]smile",
+        "description": "Math mode smile symbol."
+      },
+      {
+        "name": "sqcap",
+        "syntax": "[backslash]sqcap",
+        "example": "[backslash]sqcap",
+        "description": "Math mode square intersection symbol."
+      },
+      {
+        "name": "sqcup",
+        "syntax": "[backslash]sqcup",
+        "example": "[backslash]sqcup",
+        "description": "Math mode square union symbol."
+      },
+      {
+        "name": "sqrt",
+        "syntax": "[backslash]sqrt[3]{arg}",
+        "example": "[backslash]sqrt[3]{arg}",
+        "description": "Square root of arg. 3 (root) is optional."
+      },
+      {
+        "name": "sqsubset",
+        "syntax": "[backslash]sqsubset",
+        "example": "[backslash]sqsubset",
+        "description": "Math mode square subset symbol."
+      },
+      {
+        "name": "sqsubseteq",
+        "syntax": "[backslash]sqsubseteq",
+        "example": "[backslash]sqsubseteq",
+        "description": "Math mode square subset or equal symbol."
+      },
+      {
+        "name": "sqsupset",
+        "syntax": "[backslash]sqsupset",
+        "example": "[backslash]sqsupset",
+        "description": "Math mode square superset symbol."
+      },
+      {
+        "name": "sqsupseteq",
+        "syntax": "[backslash]sqsupseteq",
+        "example": "[backslash]sqsupseteq",
+        "description": "Math mode square superset or equal symbol."
+      },
+      {
+        "name": "ss",
+        "syntax": "[backslash]ss",
+        "example": "[backslash]ss",
+        "description": "ß (German sharp s) symbol."
+      },
+      {
+        "name": "stackrel",
+        "syntax": "[backslash]stackrel{stuff}{delim}",
+        "example": "[backslash]stackrel{f}{[backslash]longrightarrow}",
+        "description": "Puts stuff above the delimiter."
+      },
+      {
+        "name": "star",
+        "syntax": "[backslash]star",
+        "example": "[backslash]star",
+        "description": "Math mode star symbol."
+      }
 ]
