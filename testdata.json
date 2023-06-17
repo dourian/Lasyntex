@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Sigma",
+        "syntax": "[backslash]sigma",
+        "example": "[backslash]sigma",
+        "description": "Creates a sigma variable"
+    },
+    {
+        "name": "diamond",
+        "syntax": "[backslash]diamond",
+        "example": "[backslash]diamond",
+        "description": "Creates a diamond"
+    }
+]
