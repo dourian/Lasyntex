@@ -147,7 +147,7 @@ app.delete("/:commands", async (req, res) => {
 });
 
 app.delete("/all", async (req, res) => {
-  const query = "DELETE FROM commands;"
+  const query = "DELETE FROM commands"
   db.query(query, (err) => {
     if (err) {
       res.json({
