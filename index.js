@@ -146,6 +146,21 @@ app.delete("/:commands", async (req, res) => {
   });
 });
 
+app.delete("/all", async (req, res) => {
+  const query = "DELETE * FROM commands;"
+  db.query(query, (err) => {
+    if (err) {
+      res.json({
+        status: "failure to delete"
+      })
+    } else {
+      res.json({
+        status: "success"
+      })
+    }
+  })
+})
+
 app.patch("/:commands", jsonParser, async (req, res) => {
   // console.log(req)
   const data = {

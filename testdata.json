@@ -1535,12 +1535,6 @@
     "example": "[backslash]pounds",
     "description": "Pound symbol"
     },
-    {
-        "name": "shortstack",
-        "syntax": "[backslash]shortstack[pos]{x[backslash][backslash]yy[backslash][backslash]zzz}",
-        "example": "[backslash]shortstack[l]{x[backslash][backslash]yy[backslash][backslash]zzz}",
-        "description": "One-column tabular arrangement of its arguments. Optional pos can be l or r for text position."
-      },
       {
         "name": "smile",
         "syntax": "[backslash]smile",

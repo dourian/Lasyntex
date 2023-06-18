@@ -5,7 +5,7 @@ import Global from "./classes/Global"
 
 
 function App() {
-  fetch("https://raw.githubusercontent.com/dourian/Lasyntex/main/testdata.json")
+  fetch("https://lasyntex.herokuapp.com/allcommands")
     .then((response) => response.json())
     .then((data) => {
       // sorts array lexigraphically first
