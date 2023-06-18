@@ -104,9 +104,11 @@ app.post("/single", jsonParser, async (req, res) => {
   });
 });
 
-app.post("/mulitple/addmultiple", jsonParser, async (req, res) => {
+app.post("/multiple/addmultiple", jsonParser, async (req, res) => {
   var ar = req.body.commands;
-  const query = "INSERT INTO commands VALUES (?,?,?,?)";
+  console.log(ar)
+  const query = `INSERT INTO commands VALUES (?,?,?,?)`;
+  let flag = true
   ar.forEach(element => {
     const data = {
       name: element.name,
@@ -114,20 +116,25 @@ app.post("/mulitple/addmultiple", jsonParser, async (req, res) => {
       example: element.example,
       description: element.description
     }
+    
     db.query(query, Object.values(data), (error) => {
       if (error) {
-        res.json({
-          status: "failure",
-          reason: error.code,
-        })
+        flag = false
       } else {
-        res.json({
-          status: "success",
-          data: data,
-        });
+        console.log(`added ${element.name}`)
       }
     })
   });
+  if (!flag) {
+    res.json({
+      status: "failure"
+    })
+  } else {
+    res.json({
+      status: "success"
+    })
+  }
+  
 })
 
 app.delete("/all", async (req, res) => {
