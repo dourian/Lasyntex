@@ -80,7 +80,7 @@ app.get("/:commands", async (req, res) => {
   });
 });
 
-app.post("/", jsonParser, async (req, res) => {
+app.post("/single", jsonParser, async (req, res) => {
   console.log(req.body)
   const data = {
     name: req.body.name,
@@ -104,7 +104,7 @@ app.post("/", jsonParser, async (req, res) => {
   });
 });
 
-app.post("/addmultiple", jsonParser, async (req, res) => {
+app.post("/mulitple/addmultiple", jsonParser, async (req, res) => {
   var ar = req.body.commands;
   const query = "INSERT INTO commands VALUES (?,?,?,?)";
   ar.forEach(element => {
@@ -130,7 +130,24 @@ app.post("/addmultiple", jsonParser, async (req, res) => {
   });
 })
 
-app.delete("/:commands", async (req, res) => {
+app.delete("/all", async (req, res) => {
+  const query = `DELETE FROM commands`;
+  // console.log(query)
+  // console.log("running del all")
+  db.query(query, (err) => {
+    if (err) {
+      res.json({
+        status: "failure to delete"
+      });
+    } else {
+      res.json({
+        status: "success"
+      });
+    }
+  });
+});
+
+app.delete("/single/:commands", async (req, res) => {
   const query = `DELETE FROM commands WHERE name= ?`;
   db.query(query, [req.params.commands], (error) => {
     if (error) {
@@ -146,20 +163,7 @@ app.delete("/:commands", async (req, res) => {
   });
 });
 
-app.delete("/all", async (req, res) => {
-  const query = `DELETE * FROM commands`;
-  db.query(query, (err) => {
-    if (err) {
-      res.json({
-        status: "failure to delete"
-      });
-    } else {
-      res.json({
-        status: "success"
-      });
-    }
-  });
-});
+
 
 app.patch("/:commands", jsonParser, async (req, res) => {
   // console.log(req)
