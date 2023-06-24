@@ -1,4 +1,4 @@
-# Lasyntex: API
+# Lasyntex
 (if any of the links don't work.. then I ran out of credits)
 
 **API:** [https://lasyntex-service-e5x5h3x7kq-uc.a.run.app](https://lasyntex.herokuapp.com)
