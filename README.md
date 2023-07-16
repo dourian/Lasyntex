@@ -1,4 +1,5 @@
 # Lasyntex
+![lasyntex2](https://github.com/dourian/Lasyntex/assets/75771131/6ebdfe37-4676-482c-8a0e-0d79d08bb90c)
 Lasyntex is an API and website for students to quickly search for commands in LaTeX.
 
 ## Links
