@@ -3,9 +3,9 @@
 Lasyntex is an API and website for students to quickly search for commands in LaTeX.
 
 ## Links
-https://lasyntex.herokuapp.com
+API: https://lasyntex.herokuapp.com
 
-https://lasyntex.ca
+Website: https://lasyntex.ca
 
 ## Tech Stack
 
