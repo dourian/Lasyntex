@@ -1,5 +1,5 @@
 # Lasyntex
-Lasyntex is an API and website for students to quickly search for commands in LaTeX
+Lasyntex is an API and website for students to quickly search for commands in LaTeX.
 
 ## Links
 https://lasyntex.herokuapp.com
