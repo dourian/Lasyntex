@@ -26,5 +26,5 @@ Website: https://lasyntex.ca
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
 
-# Architecture
+## Architecture
 ![API project](https://user-images.githubusercontent.com/75771131/211238851-c94341a8-9427-4628-9916-07608de1a70a.png)
