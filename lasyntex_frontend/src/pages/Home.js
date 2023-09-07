@@ -1,11 +1,11 @@
-import SearchBar from "../components/Searchbar";
+import SearchBar from "../Components/Searchbar";
 import React, { useState, useEffect } from "react";
 import logo from "../assets/lasyntex.svg";
 import "../App.css";
-import SearchResult from "../components/SearchResult";
+import SearchResult from "../Components/SearchResult";
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import Bottomleft from "../components/Bottomleft";
+import Bottomleft from "../Components/Bottomleft";
 import { getRemoteConfig } from "firebase/remote-config";
 import { getValue } from "firebase/remote-config";
 import Global from "../classes/Global"
